@@ -20,21 +20,21 @@ The REST API endpoint is  `https://$BM_SVR.ebi.ac.uk/biomodels/services/submissi
 
 
 ## uploading files
-Update the variable `FILES_DIR` in the `cmd.sh` script to the path where your model files are located. Both absolute and relative path perfectly work. <strong>Make sure the names of all files match with the names defined in the `submission-metadata.json` file, otherwise the process will definitely fail. 
+Update the variable `FILES_DIR` in the `cmd.sh` script to the path where your model files are located. Both absolute and relative path perfectly work. <strong>Make sure the names of all files match with the names defined in the `submission-metadata.json` file, otherwise the process will definitely fail</strong>. 
 
 ## input file: submission-metadata.json
 A copy of the input file like `submission-metadata.json` is downloaded from BioModels. When viewing an individual model in BioModels in JSON format, we can hit, for example, `https://wwwdev.ebi.ac.uk/biomodels/MODEL1703310000?format=json` in on the dev instance.
 
 Then, appending some other properties to that JSON file. These properties are explained below.
 
-* "type": "PubMed ID"|"DOI": `required` in the `publication` section.
-* "accession": "34380040": `required` in the `publication` section.
-* "isAmend": true|false: `required` for UPDATE
-* "comment": "A free text describing what you have modified your model.": `required` for UPDATE
-* "submissionId" : "MODEL2406050001": `required` for UPDATE
-* "modelling_approach": "ordinary differential equation model": `required`.
-* "readme_submission": "This is the first sumbmission done via API": `optional` 
-* "other_info": "SBML Model Format": `optional`
-* "isMetadataSubmission": true|false: `optional`
+- "type": "PubMed ID"|"DOI": `required` in the `publication` section.
+- "accession": "34380040": `required` in the `publication` section.
+- "isAmend": true|false: `required` for UPDATE.
+- "comment": "A free text describing what you have modified your model.": `required` for UPDATE.
+- "submissionId" : "MODEL2406050001": `required` for UPDATE.
+- "modelling_approach": "ordinary differential equation model": `required`.
+- "readme_submission": "This is the first sumbmission done via API": `optional`.
+- "other_info": "SBML Model Format": `optional`.
+- "isMetadataSubmission": true|false: `optional`.
 
-The rest fields are explainable as what their names are.
+The other fields are explainable as what their names are.
