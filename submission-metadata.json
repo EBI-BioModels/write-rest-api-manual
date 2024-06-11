@@ -8,6 +8,9 @@
   "readme_submission": "This is the first sumbmission done via API. The correct modelling approach could be something else. I use machine learning for the simplicity.",
   "other_info": "SBML Model Format",
   "isMetadataSubmission": false,
+  "isAmend": false,
+  "submissionId": "MODEL2406090008",
+  "comment": "Tried to parse the publication details and persist them into DB.",
   "publication" : {
     "type": "PubMed ID",
     "accession": "34380040",
