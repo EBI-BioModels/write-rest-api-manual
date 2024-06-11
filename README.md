@@ -20,7 +20,7 @@ The REST API endpoint is  `https://$BM_SVR.ebi.ac.uk/biomodels/services/submissi
 
 
 ## uploading files
-Update the variable `FILES_DIR` in the script to the path where your model files are located. Both absolute and relative path perfectly work.
+Update the variable `FILES_DIR` in the `cmd.sh` script to the path where your model files are located. Both absolute and relative path perfectly work. <strong>Make sure the names of all files match with the names defined in the `submission-metadata.json` file, otherwise the process will definitely fail. 
 
 ## input file: submission-metadata.json
 A copy of the input file like `submission-metadata.json` is downloaded from BioModels. When viewing an individual model in BioModels in JSON format, we can hit, for example, `https://wwwdev.ebi.ac.uk/biomodels/MODEL1703310000?format=json` in on the dev instance.
