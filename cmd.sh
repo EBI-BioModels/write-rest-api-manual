@@ -5,7 +5,7 @@ PREFIX_DOWNUP_SVR="http://localhost:7000" # local instance
 # PREFIX_DOWNUP_SVR="https://wwwdev.ebi.ac.uk" # dev instance
 # PREFIX_DOWNUP_SVR="https://www.ebi.ac.uk" # prod instance
 
-UPLOAD_SERVER_URL="$PREFIX_DOWNUP_SVR/biomodels/services/download/upload"
+UPLOAD_SERVER_URL="$PREFIX_DOWNUP_SVR/biomodels/services/upload"
 
 BM_SVR="http://localhost:8080/biomodels" # local instance
 # BM_SVR="https://wwwdev.ebi.ac.uk/biomodels" # dev instance
