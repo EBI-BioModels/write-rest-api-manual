@@ -11,5 +11,5 @@ echo $SUBMISSION_FOLDER
 curl -X POST \
   -H "SubmissionFolder: $SUBMISSION_FOLDER" \
   -H "Authorization: Bearer $ACCESS_TOKEN" \
-  -F file=@/Users/tnguyen/Downloads/Stucki2005.xml \
+  -F file=@files/Adlung2021_model_jakstat_pa.xml \
   https://$WWW.ebi.ac.uk/biomodels/services/upload
