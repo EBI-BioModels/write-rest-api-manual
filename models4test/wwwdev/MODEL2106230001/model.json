@@ -1,0 +1,42 @@
+{
+  "name" : "Aubry1995 - Nine-compartment model of fluid-phase endocytosis kinetics in Dictyostelium discoideum",
+  "description" : "Fluid-phase endoeytosis (<a href=\"https://www.sciencedirect.com/topics/pharmacology-toxicology-and-pharmaceutical-science/pinocytosis\" target=\"_blank\">pinocytosis</a>) kinetics were studied in Dictyostelium discoideum amoebae from the axenic strain Ax-2 that exhibits high rates of fluid-phase endoeytosis when cultured in liquid nutrient media. Fluorescein-labelled dextran (FITC-dextran) was used as a marker in continuous uptake- and in pulse-chase exocytosis experiments. In the latter case, efflux of the marker was monitored on cells loaded for short periods of time and resuspended in a marker-free medium. A multicompartmental model was developed which describes satisfactorily fluid-phase endocytosis kinetics. In particular, it accounts correctly for the extended latency period before exocytosis in pulse-chase experiments and suggests some maturation stages in the pathway.",
+  "format" : {
+    "name" : "COMBINE archive",
+    "version" : "0.1"
+  },
+  "publication": {
+    "type": "DOI",
+    "accession": "10.1038/s41586-020-2453-z"
+  },
+  "files" : {
+    "main" : [ {
+      "name" : "Aubry1995.omex",
+      "description" : "COMBINE archive of nine-compartmental model of fluid-phase endocytosis kinetics in Dictystelium discoideum",
+      "fileSize" : "13254",
+      "mimeType" : "application/zip",
+      "md5sum" : "5dbf9bd07c570f54126384205533b8e5",
+      "sha1sum" : "6aef457d1dbdc52084505aa603f54597c334c4c2",
+      "sha256sum" : "acfd4b4160bf5dd7ab2d2afacbdeb2ff2b67922e8d5329724fee03975262899a"
+    } ]
+  },
+  "history" : {
+    "revisions" : [ {
+      "version" : 1,
+      "submitted" : 1624486183000,
+      "submitter" : "Khang N. M. Nguyen",
+      "comment" : "Import of Aubry1995 - Nine-compartment model of fluid-phase endocytosis kinetics in Dictyostelium discoideum"
+    }, {
+      "version" : 2,
+      "submitted" : 1711130144000,
+      "submitter" : "Khang N. M. Nguyen",
+      "comment" : "Improved the model description."
+    } ]
+  },
+  "submissionId" : "MODEL2106230001",
+  "comment": "Added the publication via DOI. For testing purpose, the publication does not belong to this model.",
+  "isAmend": false,
+  "modelling_approach": "ordinary differential equation model",
+  "readme_submission": "This revision is updated via API",
+  "other_info": "OMEX Model Format"
+}
