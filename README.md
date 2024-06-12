@@ -5,7 +5,7 @@ In this repo, the directories and files are explained as below:
 * cmd.sh: bash script to run the create/update pipeline
 * submission-metadata.json
 
-Notes: The names of the files and directories are not necessary identical to the ones in this repo but you should make sure that its references in the bash script are correspodingly matched.
+Notes: The names of the files and directories are not necessary identical to the ones in this repo but you should make sure that its references in the bash script are correspondingly matched.
 
 ## cmd.sh script
 Please comment or uncomment the variables `ACCESS_TOKEN`, `PREFIX_DOWNUP_SVR`, and `BM_SVR` to your proper values.

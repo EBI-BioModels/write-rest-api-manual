@@ -1,5 +1,5 @@
 # local tokens
-ACCESS_TOKEN=$ACCESS_TOKEN_LOCAL_ADMIN
+ACCESS_TOKEN=$(echo $ACCESS_TOKEN_LOCAL_ADMIN)
 
 PREFIX_DOWNUP_SVR="http://localhost:7000" # local instance
 # PREFIX_DOWNUP_SVR="https://wwwdev.ebi.ac.uk" # dev instance
@@ -18,7 +18,7 @@ SUBMISSION_FOLDER=$(python3 -c "import uuid; print(str(uuid.uuid4()))")
 echo "$SUBMISSION_FOLDER" 
 
 echo "UPLOADING FILES"
-FILES_DIR=~/Downloads/BioModels/MODEL2103080001
+FILES_DIR=files
 for file in $FILES_DIR/*; do
 echo "Uploading $file"
 curl -s -X POST \
