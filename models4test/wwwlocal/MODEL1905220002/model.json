@@ -1,0 +1,57 @@
+{
+  "name" : "Heiland2019 - Two compartment model of NAD biosynthesis and consumption",
+  "description" : "The model is based on MODEL1905220001 but has two compartments that have different composition of the biosynthetic enzymes NADA and NamPT. One compartment contains in addition NNMT, the other one does not. Both compartments are competing for a common Nam source.",
+  "format" : {
+    "name" : "SBML",
+    "version" : "L3V1"
+  },
+  "modelling_approach": "Other",
+  "readme_submission": "This is the second submission done via API",
+  "other_info": "SBML Model Format",
+  "publication" : {
+    "journal" : "PNAS",
+    "title" : "Identification of evolutionary and kinetic drivers of NAD-dependent signaling",
+    "affiliation" : "UiT Arctic University of Norway, Tromsø",
+    "synopsis" : "Nicotinamide adenine dinucleotide (NAD) provides an important link between metabolism and signal transduction and has emerged as central hub between bioenergetics and all major cellular events. NAD-dependent signaling (e.g., by sirtuins and poly–adenosine diphosphate [ADP] ribose polymerases [PARPs]) consumes considerable amounts of NAD. To maintain physiological functions, NAD consumption and biosynthesis need to be carefully balanced. Using extensive phylogenetic analyses, mathematical modeling of NAD metabolism, and experimental verification, we show that the diversification of NAD-dependent signaling in vertebrates depended on 3 critical evolutionary events: 1) the transition of NAD biosynthesis to exclusive usage of nicotinamide phosphoribosyltransferase (NamPT); 2) the occurrence of nicotinamide N-methyltransferase (NNMT), which diverts nicotinamide (Nam) from recycling into NAD, preventing Nam accumulation and inhibition of NAD-dependent signaling reactions; and 3) structural adaptation of NamPT, providing an unusually high affinity toward Nam, necessary to maintain NAD levels. Our results reveal an unexpected coevolution and kinetic interplay between NNMT and NamPT that enables extensive NAD signaling. This has implications for therapeutic strategies of NAD supplementation and the use of NNMT or NamPT inhibitors in disease treatment.",
+    "year" : 2019,
+    "month" : "6",
+    "link" : "http://identifiers.org/doi/10.1073/pnas.1902346116",
+    "authors" : [ {
+      "name" : "Mathias Bockwoldt",
+      "institution" : "UiT Arctic University of Norway, Tromsø"
+    }, {
+      "name" : "Dorothée Houry",
+      "institution" : "University of Bergen, Norway"
+    }, {
+      "name" : "Marc Niere",
+      "institution" : "University of Bergen, Norway"
+    }, {
+      "name" : "Toni I. Gossmann",
+      "institution" : "University of Sheffield, UK"
+    }, {
+      "name" : "Ines Reinartz",
+      "institution" : "Karlsruhe Institute of Technology, Germany"
+    }, {
+      "name" : "Alexander Schug",
+      "institution" : "Forschungszentrum Jülich, Germany"
+    }, {
+      "name" : "Mathias Ziegler",
+      "institution" : "University of Bergen, Norway"
+    }, {
+      "name" : "Ines Heiland",
+      "institution" : "UiT Arctic University of Norway, Tromsø"
+    } ]
+  },
+  "files" : {
+    "main" : [ {
+      "name" : "data_S3_competition_model.xml",
+      "fileSize" : "193909",
+      "description": "SBML L3V1 Two compartment model of NAD biosynthesis and consumption"
+    } ],
+    "additional" : [ {
+      "name": "data_S3_competition_model.cps",
+      "fileSize": "299008",
+      "description": "COPASI file for the curated model"
+    } ] 
+  }
+}
