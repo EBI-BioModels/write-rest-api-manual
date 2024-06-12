@@ -2,6 +2,7 @@
 In this repo, the directories and files are explained as below:
 
 * models4test: includes all model directories and BASH scripts
+* files: includes all files to be uploaded
 * cmd.sh: bash script to run the create/update pipeline
 * submission-metadata.json
 
