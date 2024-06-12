@@ -1,0 +1,145 @@
+{
+  "name" : "Holmes2006_MuscleContration",
+  "description" : "<notes xmlns=\"http://www.sbml.org/sbml/level2/version4\">\r\n      <body xmlns=\"http://www.w3.org/1999/xhtml\">\r\n        <p>This a model from the article:      <br />\r\n        <strong>Teaching from classic papers: Hill's model of muscle contraction.</strong>\r\n        <br />\r\n          Holmes JW.      <em>Adv Physiol Educ</em>\r\n          2006 Jun;30(2):67-72      <a href=\"http://www.ncbi.nlm.nih.gov/pubmed/16709736\">16709736</a>\r\n          ,      <br />\r\n        <strong>Abstract:</strong>\r\n        <br />\r\n          A. V. Hill's 1938 paper \"The heat of shortening and the dynamic constants of\r\nmuscle\" is an enduring classic, presenting detailed methods, meticulous\r\nexperiments, and the model of muscle contraction that now bears Hill's name.\r\nPairing a simulation based on Hill's model with a reading of his paper allows\r\nstudents to follow his thought process to discover key principles of muscle\r\nphysiology and gain insight into how to develop quantitative models of\r\nphysiological processes. In this article, the experience of the author using\r\nthis approach in a graduate biomedical engineering course is outlined, along\r\nwith suggestions for adapting this approach to other audiences.      </p>\r\n      <p>This model was taken from the      <a href=\"http://www.cellml.org/models\">CellML repository</a>\r\n          and automatically converted to SBML.      <br />\r\n          The original model was:      <a href=\"http://models.cellml.org/exposure/d40159fdd9f577e87c6d786abcd6ce6c\">\r\n        <strong>Holmes JW. (2006) - version=1.0</strong>\r\n      </a>\r\n      <br />\r\n          The original CellML model was created by:      <br />\r\n      <strong>Paul Harrington</strong>\r\n      <br />\r\n          paul.harrington@auckland.ac.nz      <br />\r\n          The University of Auckland      <br /></p>\r\n    <p>This model originates from BioModels Database: A Database of Annotated Published Models (http://www.ebi.ac.uk/biomodels/). It is copyright (c) 2005-2011 The BioModels.net Team.      <br />\r\n          To the extent possible under law, all copyright and related or neighbouring rights to this encoded model have been dedicated to the public domain worldwide. Please refer to      <a href=\"http://creativecommons.org/publicdomain/zero/1.0/\" title=\"Creative Commons CC0\">CC0 Public Domain Dedication</a>\r\n          for more information.      </p>\r\n  <p>In summary, you are entitled to use this encoded model in absolutely any manner you deem suitable, verbatim, or with modification, alone or embedded it in a larger context, redistribute it, commercially or not, in a restricted way or not..      <br />\r\n  <br />\r\n          To cite BioModels Database, please use:      <a href=\"http://www.ncbi.nlm.nih.gov/pubmed/20587024\" target=\"_blank\">Li C, Donizelli M, Rodriguez N, Dharuri H, Endler L, Chelliah V, Li L, He E, Henry A, Stefan MI, Snoep JL, Hucka M, Le Novère N, Laibe C (2010) BioModels Database: An enhanced, curated and annotated resource for published quantitative kinetic models. BMC Syst Biol., 4:92.</a>\r\n</p>\r\n</body>\r\n</notes>",
+  "format" : {
+    "name" : "SBML",
+    "version" : "L2V4"
+  },
+  "publication" : {
+    "type" : "PubMed ID",
+    "accession" : "16709736",
+    "journal" : "Advances in physiology education",
+    "title" : "Teaching from classic papers: Hill's model of muscle contraction.",
+    "affiliation" : "Department of Biomedical Engineering, Columbia University, New York, New York 10027, USA. jh553@columbia.edu",
+    "synopsis" : "A. V. Hill's 1938 paper \"The heat of shortening and the dynamic constants of muscle\" is an enduring classic, presenting detailed methods, meticulous experiments, and the model of muscle contraction that now bears Hill's name. Pairing a simulation based on Hill's model with a reading of his paper allows students to follow his thought process to discover key principles of muscle physiology and gain insight into how to develop quantitative models of physiological processes. In this article, the experience of the author using this approach in a graduate biomedical engineering course is outlined, along with suggestions for adapting this approach to other audiences.",
+    "year" : 2006,
+    "month" : "6",
+    "volume" : "30",
+    "issue" : "2",
+    "pages" : "67-72",
+    "link" : "http://identifiers.org/pubmed/16709736",
+    "authors" : [ {
+      "name" : "Jeffrey W Holmes",
+      "institution" : "Department of Biomedical Engineering, Columbia University, New York, New York 10027, USA. jh553@columbia.edu",
+      "orcid" : "0000-0001-9125-7220"
+    } ]
+  },
+  "files" : {
+    "main" : [ {
+      "name" : "MODEL1006230007_url.xml",
+      "description" : "SBML L2V4 representation of Holmes2006_MuscleContration",
+      "fileSize" : "10008",
+      "mimeType" : "application/xml",
+      "md5sum" : "90f519a21d763dadadaba632f1b7c5e1",
+      "sha1sum" : "29d6b6701ec7f9e3dbec50035726f9d3d5777bd7",
+      "sha256sum" : "a628d025891ae16123ccd91aef4731791310d57fa90a3d7f9bc9792c3d08185a"
+    } ],
+    "additional" : [ {
+      "name" : "MODEL1006230007-biopax2.owl",
+      "description" : "Auto-generated BioPAX (Level 2)",
+      "fileSize" : "1073",
+      "mimeType" : "application/rdf+xml",
+      "md5sum" : "f0d0f5bf2ba7916c7293bea7702c70f9",
+      "sha1sum" : "afdd1fe2caac0a557dcbce129473926f4f80de1f",
+      "sha256sum" : "50c4c4d0339e1b3a60dd373a5f296270cb81482039714b98feb33826d6208788"
+    }, {
+      "name" : "MODEL1006230007-biopax3.owl",
+      "description" : "Auto-generated BioPAX (Level 3)",
+      "fileSize" : "2039",
+      "mimeType" : "application/rdf+xml",
+      "md5sum" : "4535032eed288b8720499fcf4e5f591a",
+      "sha1sum" : "ad3d490e731b7ff869dad9943f2cc12e990548c9",
+      "sha256sum" : "316b3bb0f5c336a69d5ad9225f8c6e94f914e430c19c73ae1dcbbad543253542"
+    }, {
+      "name" : "MODEL1006230007.m",
+      "description" : "Auto-generated Octave file",
+      "fileSize" : "2324",
+      "mimeType" : "text/plain",
+      "md5sum" : "d19416c47f9a52692642da5b26dd5fd9",
+      "sha1sum" : "126586dd3f39947b0771065dbf2d6c5dd8a1ae4d",
+      "sha256sum" : "77a14d95c02bfc7ed1e6db9ec790daed0d714e12831046b1f5b95e1332c3a0fe"
+    }, {
+      "name" : "MODEL1006230007.pdf",
+      "description" : "Auto-generated PDF file",
+      "fileSize" : "137506",
+      "mimeType" : "application/pdf",
+      "md5sum" : "6fea7a53072b8307f41e68b3c7a68600",
+      "sha1sum" : "1e4dfd18ceefd9ca9aeaa7e5f4bff3f1665762bf",
+      "sha256sum" : "ec57f89f9b7f20a667ea3bf880ee8944d35544be2b4f4b9984840933cbbe2f83"
+    }, {
+      "name" : "MODEL1006230007.png",
+      "description" : "Auto-generated Reaction graph (PNG)",
+      "fileSize" : "5164",
+      "mimeType" : "image/png",
+      "md5sum" : "c30b7d56ea47c3843c82b135d7d61387",
+      "sha1sum" : "29aaa040058418305071301e82afe443bf2be038",
+      "sha256sum" : "5fda4a6ecf6f2bffcaae62525ab174b281c1fd8500d928e26c38e127a4bb8b70"
+    }, {
+      "name" : "MODEL1006230007.sci",
+      "description" : "Auto-generated Scilab file",
+      "fileSize" : "166",
+      "mimeType" : "text/plain",
+      "md5sum" : "8d4f2fa803efab8739035f18b3701c5b",
+      "sha1sum" : "341181641437a40a217a52c495ea0d1e350f0782",
+      "sha256sum" : "5e2d1f18b397384f16dc87821fdc536e4067ef24a28deeffd3f4de8734402121"
+    }, {
+      "name" : "MODEL1006230007.svg",
+      "description" : "Auto-generated Reaction graph (SVG)",
+      "fileSize" : "851",
+      "mimeType" : "image/svg+xml",
+      "md5sum" : "5c70d47755dc4ffe259b047cd597dbac",
+      "sha1sum" : "b770ff74a046f17da24ae1c8a2355046bc1e9a00",
+      "sha256sum" : "c3ea7c76247734b439bb420cd08d649bb6b0769cb18507bfae950bef1d1123f6"
+    }, {
+      "name" : "MODEL1006230007.vcml",
+      "description" : "Auto-generated VCML file",
+      "fileSize" : "900",
+      "mimeType" : "application/xml",
+      "md5sum" : "67bb31e926a2c64292c8f36b4efbe069",
+      "sha1sum" : "f858593def4b4015fb79e4478459cfea441c5ae5",
+      "sha256sum" : "bb9681fc3cd252f92524f1ff54b92658b1219f7f25bea07c3892fcb7053d4c44"
+    }, {
+      "name" : "MODEL1006230007.xpp",
+      "description" : "Auto-generated XPP file",
+      "fileSize" : "1605",
+      "mimeType" : "text/plain",
+      "md5sum" : "de93ccf39ca6bb1c81de2156ad6ab755",
+      "sha1sum" : "e1dc78b2d1c2473898ad3da5bcce188cea682338",
+      "sha256sum" : "25f0ad8363c986519aaef24251186f8c44bcdb020ce9ac7a3c107a5273bcfb81"
+    }, {
+      "name" : "MODEL1006230007_urn.xml",
+      "description" : "Auto-generated SBML file with URNs",
+      "fileSize" : "10589",
+      "mimeType" : "application/xml",
+      "md5sum" : "6228a3a5fe593689923cd55b0cc3857a",
+      "sha1sum" : "4f76e971088a9e910bde3355bc2fb4a477737bf4",
+      "sha256sum" : "fd1886a83f713e6de0fc7f091ca4d2340d433ae5870a0a9f1c5d3e264abfb85b"
+    } ]
+  },
+  "history" : {
+    "revisions" : [ {
+      "version" : 1,
+      "submitted" : 1277284312000,
+      "submitter" : "Camille Laibe",
+      "comment" : "Original import of Holmes2006_MuscleContration"
+    }, {
+      "version" : 2,
+      "submitted" : 1277467643000,
+      "submitter" : "Camille Laibe",
+      "comment" : "Current version of Holmes2006_MuscleContration"
+    }, {
+      "version" : 3,
+      "submitted" : 1521020167000,
+      "submitter" : "matthew",
+      "comment" : "Model name updated using online editor."
+    }, {
+      "version" : 4,
+      "submitted" : 1277467643000,
+      "submitter" : "matthew",
+      "comment" : "Model name updated using online editor."
+    } ]
+  },
+  "firstPublished" : 1519231517000,
+  "submissionId" : "MODEL1006230007",
+  "publicationId" : "BIOMD0000000677"
+}
