@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 ACCESS_TOKEN=$(echo $ACCESS_TOKEN_DEV_TUNG)
 WWW=wwwdev
