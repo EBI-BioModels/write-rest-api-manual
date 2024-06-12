@@ -1,0 +1,101 @@
+{
+  "name" : "Furr2005 - whole-body vitamin A metabolism in humans",
+  "description" : "Vitamin A deficiency is a major global public health problem. Among the variety of techniques that are available for assessing human vitamin A status, evaluating the provitamin A nutritional values of foodstuffs and estimating human vitamin A requirements, isotope dilution provides the most accurate estimates. Although the relative expense of isotope dilution restricts its applications, it has an important function as the standard of reference for other techniques. Mathematical modelling plays an indispensable role in the interpretation of isotope dilution data. This review summarises recent applications of stable isotope methodology to determine human vitamin A status, estimate human vitamin A requirements, and calculate the bioconversion and bioefficacy of food carotenoids. This model is cloned from the original one at https://www.ebi.ac.uk/biomodels/MODEL2405200001.",
+  "format" : {
+    "name" : "SBML",
+    "version" : "L3V1"
+  },
+  "modelling_approach": "ordinary differential equation model",
+  "readme_submission": "This is the third sumbmission done via API.",
+  "publication" : {
+    "journal" : "Public health nutrition",
+    "title" : "Stable isotope dilution techniques for assessing vitamin A status and bioefficacy of provitamin A carotenoids in humans.",
+    "affiliation" : "Craft Technologies, 4344 Frank Price Church Road, Wilson, NC 27893, USA. jfurr@crafttechnologies.com",
+    "synopsis" : "Vitamin A deficiency is a major global public health problem. Among the variety of techniques that are available for assessing human vitamin A status, evaluating the provitamin A nutritional values of foodstuffs and estimating human vitamin A requirements, isotope dilution provides the most accurate estimates. Although the relative expense of isotope dilution restricts its applications, it has an important function as the standard of reference for other techniques. Mathematical modelling plays an indispensable role in the interpretation of isotope dilution data. This review summarises recent applications of stable isotope methodology to determine human vitamin A status, estimate human vitamin A requirements, and calculate the bioconversion and bioefficacy of food carotenoids.",
+    "year" : 2005,
+    "month" : "9",
+    "volume" : "8",
+    "issue" : "6",
+    "pages" : "596-607",
+    "link" : "http://identifiers.org/doi/10.1079/PHN2004715",
+    "authors" : [ {
+      "name" : "Harold C Furr",
+      "institution" : "Craft Technologies, 4344 Frank Price Church Road, Wilson, NC 27893, USA. jfurr@crafttechnologies.com"
+    }, {
+      "name" : "Michael H Green"
+    }, {
+      "name" : "Marjorie Haskell"
+    }, {
+      "name" : "Najat Mokhtar"
+    }, {
+      "name" : "Penelope Nestel"
+    }, {
+      "name" : "Sam Newton"
+    }, {
+      "name" : "Judy D Ribaya-Mercado"
+    }, {
+      "name" : "Guangwen Tang"
+    }, {
+      "name" : "Sherry Tanumihardjo"
+    }, {
+      "name" : "Emorn Wasantwisut"
+    } ]
+  },
+  "files" : {
+    "main" : [ {
+      "name" : "furr05.xml",
+      "description" : "SBML L3V2 representation of model",
+      "fileSize" : "59790",
+      "mimeType" : "application/xml",
+      "md5sum" : "961f8771ac2e6d3faa21c4c56e9e0e55",
+      "sha1sum" : "6978acb0bf78e7b3912f820683aa1c5fab9e236f",
+      "sha256sum" : "76d3ef2c7a251cc8ec7a77582c146f2dde008e27c959467d34107a7d5caae75f"
+    } ],
+    "additional" : [ {
+      "name" : "furr05.pdf",
+      "description" : "PDF copy of article",
+      "fileSize" : "238653",
+      "mimeType" : "application/pdf",
+      "md5sum" : "ac8e9a43a9a77931f7275dc6772c5a16",
+      "sha1sum" : "0664dac016e762747bbfcaa52890edafb9267bba",
+      "sha256sum" : "4afcabd15289bc56766239dce49c0827fdffb967923fdfdfa2d4597db442dcd5"
+    }, {
+      "name" : "furr05.svg",
+      "description" : "SBGN representation of model",
+      "fileSize" : "5314",
+      "mimeType" : "image/svg+xml",
+      "md5sum" : "b4d8a227e076e9bf8e8f68030c3ffca9",
+      "sha1sum" : "ec53e38b5599e06bb1d36b64f1c331527f9f74d6",
+      "sha256sum" : "98e760efa73492a5edde4cdf11a8a5cf9dac9af4300181a79454fa851ce25bc0"
+    }, {
+      "name" : "study.tsv",
+      "description" : "TSV study sample",
+      "fileSize" : "168",
+      "mimeType" : "text/plain",
+      "md5sum" : "388f08f47e4df9717d8a2141663a3d7a",
+      "sha1sum" : "0f3deb3170ead317a9a6f75b3da925d586bfaa7c",
+      "sha256sum" : "41ca6dc1d262581eba7b01525973856b2158cb568892cda1beedf78691f8fe77"
+    } ]
+  },
+  "history" : {
+    "revisions" : [ {
+      "version" : 1,
+      "submitted" : 1717585876000,
+      "submitter" : "Teo Nguyen",
+      "comment" : "Import of Furr2005 - whole-body vitamin A metabolism in humans"
+    }, {
+      "version" : 2,
+      "submitted" : 1717586436000,
+      "submitter" : "Teo Nguyen",
+      "comment" : "Correct an annotation of MAMO."
+    }, {
+      "version" : 3,
+      "submitted" : 1717687064000,
+      "submitter" : "Teo Nguyen",
+      "comment" : "Amended the model files: add a TSV sample"
+    } ]
+  },
+  "isAmend": true,
+  "comment": "Get back furr05.svg as the SBGN representation.",
+  "submissionId" : "MODEL2406050001"
+}

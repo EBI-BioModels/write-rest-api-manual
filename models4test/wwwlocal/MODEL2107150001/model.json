@@ -1,0 +1,64 @@
+{
+  "name" : "Palaniappan2021 - Cell free modelling of second generation Toehold switches",
+  "description" : "<notes xmlns=\"http://www.sbml.org/sbml/level2/version4\">\n      <body xmlns=\"http://www.w3.org/1999/xhtml\">\n        <pre>Cervical cancer is a global public health subject as it affects women in the reproductive ages, and accounts for the second largest burden among cancer patients worldwide with an unforgiving 50% mortality rate. Poor awareness and access to effective diagnosis have led to this enormous disease burden, calling for point-of-care, minimally invasive diagnosis methods. Here, an end-to-end quantitative approach for a new kind of diagnosis has been developed, comprising identification of optimal biomarkers, design of the sensor, and simulation of the diagnostic circuit. Using miRNA expression data in the public domain, we identified circulating miRNA biomarkers specific to cervical cancer using multi-tier screening. Synthetic riboregulators called toehold switches specific for the biomarker panel were then designed. To predict the dynamic range of toehold switches for use in genetic circuits as biosensors, we developed a generic grammar of these switches, and built a multivariate linear regression model using thermodynamic features derived from RNA secondary structure and interaction. The model yielded predictions of toehold efficacy with an adjusted R2 = 0.59. Reaction kinetics modelling was performed to predict the sensitivity of the second-generation toehold switches to the miRNA biomarkers. Simulations showed a linear response between 10nM and 100nM before saturation. Our study demonstrates an end-to-end workflow for the efficient design of genetic circuits geared towards the effective detection of unique genomic signatures that would be increasingly important in today’s world. The approach has the potential to direct experimental efforts and minimise costs. All resources are provided open-source (https://github.com/igem2019) under GNU GPLv3 licence.</pre>\n      </body>\n    </notes>",
+  "format" : {
+    "name" : "SBML",
+    "version" : "L2V4"
+  },
+  "modelling_approach": "ordinary differential equation model",
+  "readme_submission": "This is the submission done via API. The aim is to verify the API pick up the publication annotated in SBML file or not.",
+  "other_info": "SBML Model Format",
+  "isMetadataSubmission": false,
+  "publication" : {
+    "type": "PubMed ID",
+    "accession": "35475253",
+    "journal" : "Synthetic and systems biotechnology",
+    "title" : "End-to-end computational approach to the design of RNA biosensors for detecting miRNA biomarkers of cervical cancer.",
+    "affiliation" : "Department of Bioengineering, School of Chemical and Biotechnology, SASTRA Deemed University, Thanjavur, Tamil Nadu, 613 401, India.",
+    "synopsis" : "Cervical cancer is a global public health subject as it affects women in the reproductive ages, and accounts for the second largest burden among cancer patients worldwide with an unforgiving 50% mortality rate. Relatively scant awareness and limited access to effective diagnosis have led to this enormous disease burden, calling for point-of-care, minimally invasive diagnosis methods. Here, an end-to-end quantitative unified pipeline for diagnosis has been developed, beginning with identification of optimal biomarkers, concurrent design of toehold switch sensors, and finally simulation of the designed diagnostic circuits to assess performance. Using miRNA expression data in the public domain, we identified miR-21-5p and miR-20a-5p as blood-based miRNA biomarkers specific to early-stage cervical cancer employing a multi-tier algorithmic screening. Synthetic riboregulators called toehold switches specific to the biomarker panel were then designed. To predict the dynamic range of toehold switches for use in genetic circuits as biosensors, we used a generic grammar of these switches, and built a neural network model of dynamic range using thermodynamic features derived from mRNA secondary structure and interaction. Second-generation toehold switches were used to overcome the design challenges associated with miRNA biomarkers. The resultant model yielded an adj. R<sup>2</sup> ∼0.71, outperforming earlier models of toehold-switch dynamic range. Reaction kinetics modelling was performed to predict the sensitivity of the second-generation toehold switches to the miRNA biomarkers. Simulations showed a linear response between 10 nM and 100 nM before saturation. Our study demonstrates an end-to-end computational workflow for the efficient design of genetic circuits geared towards the effective detection of unique genomic/nucleic-acid signatures. The approach has the potential to replace iterative experimental trial and error, and focus time, money, and efforts. All software including the toehold grammar parser, neural network model and reaction kinetics simulation are available as open-source software (https://github.com/SASTRA-iGEM2019) under GNU GPLv3 licence.",
+    "year" : 2022,
+    "month" : "6",
+    "volume" : "7",
+    "issue" : "2",
+    "pages" : "802-814",
+    "link" : "http://identifiers.org/pubmed/35475253",
+    "authors" : [ {
+      "name" : "Priyannth Ramasami S Baabu",
+      "institution" : "Department of Bioengineering, School of Chemical and Biotechnology, SASTRA Deemed University, Thanjavur, Tamil Nadu, 613 401, India.School of Advanced Materials Science and Engineering, Sungkyunkwan University (SKKU), Suwon, 16419, Republic of Korea."
+    }, {
+      "name" : "Shivaramakrishna Srinivasan",
+      "institution" : "Department of Bioinformatics, School of Chemical and Biotechnology, SASTRA Deemed University, Thanjavur, Tamil Nadu 613401, India.Life Sciences Division, TCS Research, Tata Consultancy Services, Chennai, Tamil Nadu, 600042, India."
+    }, {
+      "name" : "Swetha Nagarajan",
+      "institution" : "Department of Bioengineering, School of Chemical and Biotechnology, SASTRA Deemed University, Thanjavur, Tamil Nadu, 613 401, India."
+    }, {
+      "name" : "Sangeetha Muthamilselvan",
+      "institution" : "Department of Bioinformatics, School of Chemical and Biotechnology, SASTRA Deemed University, Thanjavur, Tamil Nadu 613401, India.",
+      "orcid" : "0000-0002-2269-5216"
+    }, {
+      "name" : "Thamarai Selvi",
+      "institution" : "Department of Bioinformatics, School of Chemical and Biotechnology, SASTRA Deemed University, Thanjavur, Tamil Nadu 613401, India."
+    }, {
+      "name" : "Raghavv R Suresh",
+      "institution" : "Department of Bioengineering, School of Chemical and Biotechnology, SASTRA Deemed University, Thanjavur, Tamil Nadu, 613 401, India."
+    }, {
+      "name" : "Ashok Palaniappan",
+      "institution" : "SASTRA Deemed University",
+      "orcid" : "0000-0003-2841-9527"
+    } ]
+  },
+  "files" : {
+    "main" : [ {
+      "name" : "Palaniappan2021_v2.xml",
+      "description" : "Executable SBML for Cell free modelling of second generation toehold switches",
+      "fileSize" : "38747",
+      "mimeType" : "application/xml",
+      "md5sum" : "2f1dd75100d798741e871ec4fbb9fa28",
+      "sha1sum" : "49a553f7c5a62d64bbb4b061a487366edc37252e",
+      "sha256sum" : "af7c765801a36b6bca480281b306cefd3c756f281ddd953f361e030f935131a4"
+    } ]
+  },
+  "isAmend": true,
+  "comment": "Added the publication by adding the anntation to the SBML file.",
+  "submissionId": "MODEL2406100001"
+}
