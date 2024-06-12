@@ -1,0 +1,53 @@
+{
+  "name" : "Shah2020 - Predicting liver cytosol stability of small molecules",
+  "description" : "<p>The human liver cytosol stability model is used for predicting the stability of a drug in the cytosol of human liver cells, which is beneficial for identifying potential drug candidates early during the drug discovery process. If a drug compound is quickly absorbed, it may not reach the intended target in the body or become toxic. On the other hand, if a drug compound is too stable, it could accumulate and cause detrimental effects. The authors use an NCATS dataset of 1450 compounds screened in vitro in mouse and human cytosol fractions. Compounds were classified as stable (half-life > 30min) or unstable (half-life ≤ 30 min). Note that authors report the dataset was biased towards stable compounds.</p>\n\n<p><normal>Model Type:</normal> Machine learning model.<br>\n<normal>Model Relevance:</normal> Predicts probability of a compound stability due to liver cells metabolism.<br>\n<normal>Model Encoded by:</normal> Pauline (Ersilia)<br>\n<normal>Metadata Submitted in BioModels by:</normal> Zainab Ashimiyu-Abdusalam</p>\n\n<p>Implementation of this model code by <a href=\"https://ersilia.io/\">Ersilia</a> is available here: <br>\n<a href=\"https://github.com/ersilia-os/eos9yy1\">https://github.com/ersilia-os/eos9yy1</a></p>\n\n<img src=\"https://www.ebi.ac.uk/biomodels/static-assets/images/ersilia-logo.png\" alt=\"Ersilia Logo\" width=\"150\">",
+  "format" : {
+    "name" : "Python",
+    "version" : "*"
+  },
+  "modelling_approach": "machine learning",
+  "readme_submission": "This is the third metadata sumbmission done via API.",
+  "other_info": "This is a Python model and it is a metadata submission.",
+  "isMetadataSubmission": true,
+  "publication" : {
+    "type": "PubMed ID",
+    "accession": "33431020",
+    "journal" : "Journal of cheminformatics",
+    "title" : "Predicting liver cytosol stability of small molecules.",
+    "affiliation" : "National Center for Advancing Translational Sciences (NCATS), National Institutes of Health (NIH), 9800 Medical Center Drive, Rockville, MD, 20850, USA.",
+    "synopsis" : "Over the last few decades, chemists have become skilled at designing compounds that avoid cytochrome P (CYP) 450 mediated metabolism. Typical screening assays are performed in liver microsomal fractions and it is possible to overlook the contribution of cytosolic enzymes until much later in the drug discovery process. Few data exist on cytosolic enzyme-mediated metabolism and no reliable tools are available to chemists to help design away from such liabilities. In this study, we screened 1450 compounds for liver cytosol-mediated metabolic stability and extracted transformation rules that might help medicinal chemists in optimizing compounds with these liabilities. In vitro half-life data were collected by performing in-house experiments in mouse (CD-1 male) and human (mixed gender) cytosol fractions. Matched molecular pairs analysis was performed in conjunction with qualitative-structure activity relationship modeling to identify chemical structure transformations affecting cytosolic stability. The transformation rules were prospectively validated on the test set. In addition, selected rules were validated on a diverse chemical library and the resulting pairs were experimentally tested to confirm whether the identified transformations could be generalized. The validation results, comprising nearly 250 library compounds and corresponding half-life data, are made publicly available. The datasets were also used to generate in silico classification models, based on different molecular descriptors and machine learning methods, to predict cytosol-mediated liabilities. To the best of our knowledge, this is the first systematic in silico effort to address cytosolic enzyme-mediated liabilities.",
+    "year" : 2020,
+    "month" : "4",
+    "volume" : "12",
+    "issue" : "1",
+    "pages" : "21",
+    "link" : "http://identifiers.org/pubmed/33431020",
+    "authors" : [ {
+      "name" : "Pranav Shah",
+      "orcid" : "0000-0003-0076-7159"
+    }, {
+      "name" : "Vishal B Siramshetty",
+      "orcid" : "0000-0002-5980-8288"
+    }, {
+      "name" : "Alexey V Zakharov"
+    }, {
+      "name" : "Noel Southall",
+      "orcid" : "0000-0003-4500-880X"
+    }, {
+      "name" : "Xin Xu"
+    }, {
+      "name" : "Dac-Trung Nguyen",
+      "orcid" : "0000-0003-2591-9948"
+    } ]
+  },
+  "files" : {
+    "main" : [ {
+      "name" : "BioModelsMetadata-eos9yy1.csv",
+      "fileSize" : "4024",
+      "description": "BioModels Annotation File"
+    } ]
+  },
+  "isAmend": false,
+  "comment": "Tried to parse the publication details and persist them into DB.",
+  "submissionId" : "MODEL2406090008"
+}
