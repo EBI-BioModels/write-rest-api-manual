@@ -51,20 +51,16 @@
   "files" : {
     "main" : [ {
       "name" : "Adlung2021_model_jakstat_pa.xml",
-      "fileSize" : "101139",
       "description": "SBML L2V4 file for the curated model"
     } ],
     "additional" : [ {
       "name" : "Adlung2021_model_jakstat_pa.sedml",
-      "fileSize" : "6453",
       "description" : "SEDML file for the curated model"
     }, {
       "name" : "Adlung2021_model_jakstat_pa.cps",
-      "fileSize" : "168484",
       "description" : "COPASI file for the curated model"
     }, {
       "name" : "model_jakstat_pa.xml",
-      "fileSize" : "33206",
       "description" : "Population-average mathematical model of Epo-induced JAK2/STAT5 signal transduction in CFU-E cells"
     } ]
   }
