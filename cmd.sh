@@ -10,8 +10,8 @@ UPLOAD_SERVER_URL="$PREFIX_DOWNUP_SVR/biomodels/services/upload"
 BM_SVR="http://localhost:8080/biomodels" # local instance
 # BM_SVR="https://wwwdev.ebi.ac.uk/biomodels" # dev instance
 # BM_SVR="https://www.ebi.ac.uk/biomodels" # prod instance
-BM_SERVER_CREATE_SUBMISSION_URL="$BM_SVR/submission/create"
-BM_SERVER_UPDATE_SUBMISSION_URL="$BM_SVR/submission/update"
+BM_SERVER_CREATE_SUBMISSION_URL="$BM_SVR/api/submission/create"
+BM_SERVER_UPDATE_SUBMISSION_URL="$BM_SVR/api/submission/update"
 
 echo "SUBMITTING A MODEL"
 SUBMISSION_FOLDER=$(python3 -c "import uuid; print(str(uuid.uuid4()))")

@@ -14,14 +14,17 @@ Please comment or uncomment the variables `ACCESS_TOKEN`, `PREFIX_DOWNUP_SVR`, a
 Please contact us to support to gain an `ACCESS_TOKEN` for your work.
 
 ### Create a new submission
-The REST API endpoint is `https://$BM_SVR.ebi.ac.uk/biomodels/services/submission/create`.
+The REST API endpoint is `https://$BM_SVR.ebi.ac.uk/biomodels/api/submission/create`.
 
 ### Update an existing submission
-The REST API endpoint is  `https://$BM_SVR.ebi.ac.uk/biomodels/services/submission/update`.
+The REST API endpoint is  `https://$BM_SVR.ebi.ac.uk/biomodels/api/submission/update`.
 
 
 ## uploading files
 Update the variable `FILES_DIR` in the `cmd.sh` script to the path where your model files are located. Both absolute and relative path perfectly work. <strong>Make sure the names of all files match with the names defined in the `submission-metadata.json` file, otherwise the process will definitely fail</strong>. 
+
+The REST API endpoint for uploading files:
+`https://$BM_SVR.ebi.ac.uk/biomodels/services/upload`. 
 
 ## input file: submission-metadata.json
 A copy of the input file like `submission-metadata.json` is downloaded from BioModels. When viewing an individual model in BioModels in JSON format, we can hit, for example, `https://wwwdev.ebi.ac.uk/biomodels/MODEL1703310000?format=json` in on the dev instance.
