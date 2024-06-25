@@ -83,8 +83,6 @@ def get_new_metadata(biomd_id, old_metadata, master):
 
 def upload_model_files(biomd_id, submission_folder, auth, metadata):
     upload = {
-        "Content-Type": "application/json",
-        "Accept": "application/json",
         "Authorization": "Bearer " + auth,
         "SubmissionFolder": submission_folder
     }
