@@ -10,12 +10,14 @@ import json
 import requests
 import uuid
 
-final_dir = r"/Users/tnguyen/ownCloud/EBI/biomodels/api-submission/pyguide/models/"
-masters_filename = r"/Users/tnguyen/ownCloud/EBI/biomodels/api-submission/pyguide/all_masterfiles.json"
-AUTH_FILE = r"/Users/tnguyen/ownCloud/EBI/biomodels/api-submission/credentials/local-khang.json"
-BM_UPLOAD = "http://localhost:7000/biomodels/services/upload"
+final_dir = "final/"
+masters_filename = "all_masters.json"
+root_biomodels = "https://wwwdev.ebi.ac.uk/biomodels/"
+
+AUTH_FILE = "credentials.json"
+BM_UPLOAD = "https://wwwdev.ebi.ac.uk/biomodels/services/upload"
 prod_biomodels = "https://wwwdev.ebi.ac.uk/biomodels/"
-root_biomodels = "http://localhost:8080/biomodels/"
+# root_biomodels = "http://localhost:8080/biomodels/"
 
 
 def get_new_metadata(biomd_id, old_metadata, master):
@@ -89,12 +91,12 @@ def upload_model_files(biomd_id, submission_folder, auth, metadata):
     new_files = []
     for root, dirs, files in os.walk(final_dir + biomd_id):
         new_files.extend(files)
-    for filename in files:
+    for filename in new_files:
         files = {"file": open(final_dir + biomd_id + "/" + filename, "rb")}
         ret = requests.post(BM_UPLOAD, headers=upload, files=files)
         ret.raise_for_status()
-        # print(ret.json())
-    ret = requests.post(root_biomodels + "api/submission/update/", headers=upload, json=metadata)
+        print(ret.json())
+    ret = requests.post(prod_biomodels + "api/submission/update/", headers=upload, json=metadata)
     ret.raise_for_status()
     print(ret)
 
@@ -119,12 +121,11 @@ for root, dirs, files in os.walk(final_dir):
 
 sub_ids = {"BIOMD0000000005": "MODEL0000000011", "BIOMD0000000011": "MODEL0000000015"}
 for biomd_id in dirs:
-    if biomd_id == "BIOMD0000000005":
-        oldmd = requests.get(prod_biomodels + biomd_id, params={"format": "json"})
-        oldmetadata = oldmd.json()
+    oldmd = requests.get(prod_biomodels + biomd_id, params={"format": "json"})
+    oldmetadata = oldmd.json()
 
-        new_metadata = get_new_metadata(biomd_id, oldmd.json(), masters[biomd_id])
-        folder = biomd_id + "-" + str(uuid.uuid4())
-        folder = str(uuid.uuid4())
-        new_metadata["submissionId"] = sub_ids[new_metadata["publicationId"]]
-        upload_model_files(biomd_id, folder, credentials["access_token"], new_metadata)
+    new_metadata = get_new_metadata(biomd_id, oldmd.json(), masters[biomd_id])
+    # folder = biomd_id + "-" + str(uuid.uuid4())
+    folder = str(uuid.uuid4())
+    # new_metadata["submissionId"] = sub_ids[new_metadata["publicationId"]]
+    upload_model_files(biomd_id, folder, credentials["access_token"], new_metadata)
