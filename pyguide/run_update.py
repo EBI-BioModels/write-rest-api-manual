@@ -30,7 +30,7 @@ def get_new_metadata(biomd_id, old_metadata, master):
         "readme_submission"] = "Curation updates for SED-ML and validity, from the Center for Reproducible Biomedical Modeling, via Lucian Smith."
     metadata["other_info"] = "SBML Model Format"
     metadata["isMetadataSubmission"] = False
-    metadata["isAmend"] = True
+    metadata["isAmend"] = False
     metadata["comment"] = "A variety of manual and automated updates for all extant curated biomodels, 2024."
     metadata["format"] = old_metadata["format"]
     metadata["files"] = {"main": [], "additional": []}
