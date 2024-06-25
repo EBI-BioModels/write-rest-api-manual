@@ -12,6 +12,7 @@ import uuid
 
 final_dir = r"/Users/tnguyen/ownCloud/EBI/biomodels/api-submission/pyguide/models/"
 masters_filename = r"/Users/tnguyen/ownCloud/EBI/biomodels/api-submission/pyguide/all_masterfiles.json"
+AUTH_FILE = r"/Users/tnguyen/ownCloud/EBI/biomodels/api-submission/credentials/local-khang.json"
 BM_UPLOAD = "http://localhost:7000/biomodels/services/upload"
 prod_biomodels = "https://wwwdev.ebi.ac.uk/biomodels/"
 root_biomodels = "http://localhost:8080/biomodels/"
@@ -96,7 +97,7 @@ def uploadBiomodelFilesTo(biomd, folder, auth, metadata):
         
     
 
-f = open("credentials-khang.json", "r")
+f = open(AUTH_FILE, "r")
 credentials = json.load(f)
 f.close()
 
