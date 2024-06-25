@@ -90,7 +90,7 @@ def uploadBiomodelFilesTo(biomd, folder, auth, metadata):
         ret = requests.post(BM_UPLOAD, headers=upload, files=files)
         ret.raise_for_status()
         # print(ret.json())
-    ret = requests.post(root_biomodels + "api/submission/update/", headers=upload, json=json.dumps(metadata))
+    ret = requests.post(root_biomodels + "api/submission/update/", headers=upload, json=metadata)
     ret.raise_for_status()
     # print(ret)
         
