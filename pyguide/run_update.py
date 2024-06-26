@@ -2,7 +2,9 @@
 """
 Created on Wed Jun 12 16:14:37 2024
 
-@author: Lucian
+@authors:
+    Lucian Smith
+    Tung Nguyen
 """
 
 import os, sys
@@ -99,6 +101,12 @@ def upload_model_files(biomd_id, submission_folder, auth, metadata):
     print(ret)
 
 
+def update_modelling_approach(submission_data, modelling_approach_name):
+    submission_data["modelling_approach"] = modelling_approach_name
+    submission_data["comment"] = "Added the modelling approach"
+    return submission_data
+
+
 f = open(AUTH_FILE, "r")
 credentials = json.load(f)
 f.close()
@@ -121,8 +129,12 @@ sub_ids = {"BIOMD0000000005": "MODEL0000000011", "BIOMD0000000011": "MODEL000000
 for biomd_id in dirs:
     oldmd = requests.get(prod_biomodels + biomd_id, params={"format": "json"})
     oldmetadata = oldmd.json()
+    # print(json.dumps(oldmetadata, indent=4, sort_keys=True))
 
-    new_metadata = get_new_metadata(biomd_id, oldmd.json(), masters[biomd_id])
+    new_metadata = get_new_metadata(biomd_id, oldmetadata, masters[biomd_id])
+    # new_metadata = update_modelling_approach(new_metadata, "ordinary differential equation model")
+    # print(json.dumps(new_metadata))
+
     # folder = biomd_id + "-" + str(uuid.uuid4())
     folder = str(uuid.uuid4())
     # new_metadata["submissionId"] = sub_ids[new_metadata["publicationId"]]
