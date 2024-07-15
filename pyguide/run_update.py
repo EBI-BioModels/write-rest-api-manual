@@ -24,7 +24,7 @@ prod_biomodels = "https://wwwdev.ebi.ac.uk/biomodels/"
 
 
 def get_new_metadata(biomd_id, old_metadata, master):
-    metadata = {}
+    metadata = {}    
     for key in ["name", "description", "publication", "submissionId", "publicationId", "format"]:
         metadata[key] = old_metadata[key]
     metadata["readme_submission"] = "Curation updates for SED-ML and validity, from the Center for Reproducible Biomedical Modeling, via Lucian Smith."
@@ -94,6 +94,9 @@ def upload_model_files(biomd_id, submission_folder, auth, metadata):
         "Authorization": "Bearer " + auth,
         "SubmissionFolder": submission_folder
     }
+    params = {
+        "format": "json"
+    }
     new_files = []
     for root, dirs, files in os.walk(final_dir + biomd_id):
         new_files.extend(files)
@@ -102,7 +105,7 @@ def upload_model_files(biomd_id, submission_folder, auth, metadata):
         ret = requests.post(BM_UPLOAD, headers=upload, files=files)
         ret.raise_for_status()
         print(ret.json())
-    ret = requests.post(prod_biomodels + "api/submission/update/", headers=upload, json=metadata)
+    ret = requests.post(prod_biomodels + "api/submission/update/", headers=upload, params=params, json=metadata)
     # ret.raise_for_status()
     print(ret)
 
