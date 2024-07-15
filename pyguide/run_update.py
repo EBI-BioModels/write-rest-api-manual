@@ -21,7 +21,6 @@ dev_biomodels = "https://wwwdev.ebi.ac.uk/biomodels/"
 prod_biomodels = "https://www.ebi.ac.uk/biomodels/"
 
 AUTH_FILE = "credentials.json"
-BM_UPLOAD = "https://wwwdev.ebi.ac.uk/biomodels/services/upload"
 # root_biomodels = "http://localhost:8080/biomodels/"
 
 non_sbml2latex_pdfs = ["Text_S1.pdf", "journal.pcbi.1002815-1.pdf", "BMD586-7_annotations.pdf", "MAP_MEMOTE.pdf", ]
@@ -296,11 +295,11 @@ def upload_model_files(biomd_id, submission_folder, auth, metadata):
     for filename in new_files:
         print(filename)
         files = {"file": open(final_dir + biomd_id + "/" + filename, "rb")}
-        ret = requests.post(BM_UPLOAD, headers=upload, files=files)
+        ret = requests.post(dev_biomodels + "/services/upload", headers=upload, files=files)
         ret.raise_for_status()
         # print(ret.json())
-    ret = requests.post(prod_biomodels + "api/submission/update/", headers=upload, params=params, json=metadata)
-    ret.raise_for_status()
+    ret = requests.post(dev_biomodels + "api/submission/update/", headers=upload, params=params, json=metadata)
+    # ret.raise_for_status()
     # print(ret)
 
 
@@ -334,7 +333,7 @@ no_abstract = [469, 470, 471, 472, 473, 710, 716, 717, 1052, 1053, 1055, 1056, 1
 
 
 
-for i in range(93, 707): #1081):
+for i in range(1, 707): #1081):
 # for i in [459, 460, 461, 618, 627]:
     if i in [649, 694, 992, 993, 1049, 1050, 1051, 1066, 1067, 1068, 1069, 1070, 1071, 1073, 1074, 1075, 1076, ]: #Don't exist or aren't SBML
         continue
