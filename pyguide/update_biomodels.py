@@ -54,8 +54,8 @@ def get_new_metadata(_old_metadata):
     metadata["readme_submission"] = "Updated the model revision via REST API."
     metadata["other_info"] = "SBML Model Format"
     metadata["isMetadataSubmission"] = False
-    metadata["isAmend"] = False
-    metadata["comment"] = "Corrected the annotations (removed the duplicates) and added the article in PDF."
+    metadata["isAmend"] = True
+    metadata["comment"] = "Corrected the annotations and added the article in PDF."
     metadata["files"] = {"main": _old_metadata["files"]["main"], "additional": []}
     if "additional" in _old_metadata["files"]:
         metadata["files"]["additional"] = _old_metadata["files"]["additional"]
@@ -67,10 +67,10 @@ def get_new_metadata(_old_metadata):
     #     "name": "article.pdf",
     #     "description": "PDF file of the publication paper"
     # })
-    metadata["files"]["additional"].append({
-        "name": "article.pdf",
-        "description": "PDF file of the publication paper"
-    })
+    # metadata["files"]["additional"].append({
+    #     "name": "article.pdf",
+    #     "description": "PDF file of the publication paper"
+    # })
     if "format" in _old_metadata:
         metadata["format"] = _old_metadata["format"]
     else:
@@ -102,7 +102,7 @@ def update_model(_model_id, metadata, _headers):
     ret = requests.post(root_biomodels + "api/submission/update",
                         headers=_headers, params=params, json=metadata)
     ret.raise_for_status()
-    print(ret)
+    # print(ret)
     print(json.dumps(ret.json()))
 
 
