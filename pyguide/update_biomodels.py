@@ -12,14 +12,15 @@ import json
 import requests
 import uuid
 
-final_dir = r"C:\Users\Lucian\Desktop\temp-biomodels\final/"
 final_dir = r"/Users/tnguyen/ownCloud/EBI/biomodels/temp-biomodels/final/"
 final_dir = r"/Users/tnguyen/ownCloud/EBI/biomodels/api-submission/models4test/wwwlocal/"
+final_dir = r"/Users/tnguyen/ownCloud/EBI/biomodels/api-submission/models4test/wwwdev/"
 masters_filename = r"C:\Users\Lucian\Desktop\temp-biomodels\all_masters.json"
 masters_filename = r"/Users/tnguyen/ownCloud/EBI/biomodels/api-submission/pyguide/all_masters.json"
 root_biomodels = "https://wwwdev.ebi.ac.uk/biomodels/"
-root_biomodels = "http://localhost:8080/biomodels/"
+# root_biomodels = "http://localhost:8080/biomodels/"
 DOWNUP_SVR = "http://localhost:7000/biomodels/"
+DOWNUP_SVR = "https://wwwdev.ebi.ac.uk/biomodels/"
 
 
 def get_new_metadata(_model_id, _old_metadata):
@@ -33,12 +34,16 @@ def get_new_metadata(_model_id, _old_metadata):
     metadata["other_info"] = "SBML Model Format"
     metadata["isMetadataSubmission"] = False
     metadata["isAmend"] = True
-    metadata["comment"] = "Corrected the annotations (removed the duplicates) and added the PDF manuscript."
+    metadata["comment"] = "Corrected the annotations (removed the duplicates) and added the article in PDF."
     metadata["files"] = {"main": _old_metadata["files"]["main"], "additional": []}
     if "additional" in _old_metadata["files"]:
         metadata["files"]["additional"] = _old_metadata["files"]["additional"]
     # metadata["files"]["additional"].append({
     #     "name": "1-s2.0-S2211124722016138-main.pdf",
+    #     "description": "PDF file of the publication paper"
+    # })
+    # metadata["files"]["additional"].append({
+    #     "name": "article.pdf",
     #     "description": "PDF file of the publication paper"
     # })
     if "format" in _old_metadata:
