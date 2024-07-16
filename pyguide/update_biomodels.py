@@ -23,7 +23,28 @@ DOWNUP_SVR = "http://localhost:7000/biomodels/"
 DOWNUP_SVR = "https://wwwdev.ebi.ac.uk/biomodels/"
 
 
-def get_new_metadata(_model_id, _old_metadata):
+f = open("credentials.json", "r")
+f = open("../credentials/local-khang.json", "r")
+f = open("../credentials/wwwdev-khang.json", "r")
+credentials = json.load(f)
+f.close()
+
+f = open(masters_filename, "r")
+masters = json.load(f)
+f.close()
+
+headers = {
+    "Authorization": "Bearer " + credentials["access_token"]
+}
+
+def get_old_metadata(_model_id):
+    URL = root_biomodels + "api/model/" + _model_id + "?format=json"
+    old_md = requests.get(URL, headers=headers)
+    old_metadata = old_md.json()
+    return old_metadata
+
+
+def get_new_metadata(_old_metadata):
     metadata = {}
     metadata["submissionId"] = _old_metadata["submissionId"]
     if "publicationId" in _old_metadata:
@@ -70,39 +91,25 @@ def update_model(_model_id, metadata, _headers):
         ret = requests.post(DOWNUP_SVR + "services/upload",
                             headers=_headers, files=uploaded_files)
         ret.raise_for_status()
-        # print(ret.json())
+        print(ret.json())
     params = {
         "format": "json"
     }
     ret = requests.post(root_biomodels + "api/submission/update",
                         headers=_headers, params=params, json=metadata)
     ret.raise_for_status()
-    # print(ret)
+    print(ret)
     print(json.dumps(ret.json()))
 
-
-f = open("credentials.json", "r")
-f = open("../credentials/local-khang.json", "r")
-credentials = json.load(f)
-f.close()
-
-f = open(masters_filename, "r")
-masters = json.load(f)
-f.close()
 
 for root, dirs, files in os.walk(final_dir):
     break
 
-headers = {
-    "Authorization": "Bearer " + credentials["access_token"]
-}
 for model_id in dirs:
-    if model_id != "MODEL2311240001":
+    if model_id != "MODEL2107080001":
         pass
     else:
-        URL = root_biomodels + "api/model/" + model_id + "?format=json"
-        old_md = requests.get(URL, headers=headers)
-        old_metadata = old_md.json()
-        new_metadata = get_new_metadata(model_id, old_metadata)
+        old_metadata = get_old_metadata(model_id)
+        new_metadata = get_new_metadata(old_metadata)
         print(json.dumps(new_metadata))
         update_model(model_id, new_metadata, headers)
