@@ -54,7 +54,7 @@ def get_new_metadata(_old_metadata):
     metadata["readme_submission"] = "Updated the model revision via REST API."
     metadata["other_info"] = "SBML Model Format"
     metadata["isMetadataSubmission"] = False
-    metadata["isAmend"] = True
+    metadata["isAmend"] = False
     metadata["comment"] = "Corrected the annotations (removed the duplicates) and added the article in PDF."
     metadata["files"] = {"main": _old_metadata["files"]["main"], "additional": []}
     if "additional" in _old_metadata["files"]:
@@ -67,6 +67,10 @@ def get_new_metadata(_old_metadata):
     #     "name": "article.pdf",
     #     "description": "PDF file of the publication paper"
     # })
+    metadata["files"]["additional"].append({
+        "name": "article.pdf",
+        "description": "PDF file of the publication paper"
+    })
     if "format" in _old_metadata:
         metadata["format"] = _old_metadata["format"]
     else:
@@ -106,7 +110,9 @@ for root, dirs, files in os.walk(final_dir):
     break
 
 for model_id in dirs:
-    if model_id != "MODEL2107080001":
+    
+    if model_id != "MODEL1805180007": 
+        #"MODEL2107080001":
         pass
     else:
         old_metadata = get_old_metadata(model_id)
