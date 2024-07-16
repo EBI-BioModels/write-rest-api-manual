@@ -22,7 +22,6 @@ root_biomodels = "https://wwwdev.ebi.ac.uk/biomodels/"
 DOWNUP_SVR = "http://localhost:7000/biomodels/"
 DOWNUP_SVR = "https://wwwdev.ebi.ac.uk/biomodels/"
 
-
 f = open("credentials.json", "r")
 f = open("../credentials/local-khang.json", "r")
 f = open("../credentials/wwwdev-khang.json", "r")
@@ -37,16 +36,16 @@ headers = {
     "Authorization": "Bearer " + credentials["access_token"]
 }
 
+
 def get_old_metadata(_model_id):
     URL = root_biomodels + "api/model/" + _model_id + "?format=json"
     old_md = requests.get(URL, headers=headers)
-    old_metadata = old_md.json()
-    return old_metadata
+    _old_metadata = old_md.json()
+    return _old_metadata
 
 
 def get_new_metadata(_old_metadata):
-    metadata = {}
-    metadata["submissionId"] = _old_metadata["submissionId"]
+    metadata = {"submissionId": _old_metadata["submissionId"]}
     if "publicationId" in _old_metadata:
         metadata["publicationId"] = _old_metadata["publicationId"]
     for key in ["name", "description", "publication"]:
@@ -110,9 +109,9 @@ for root, dirs, files in os.walk(final_dir):
     break
 
 for model_id in dirs:
-    
-    if model_id != "MODEL1805180007": 
-        #"MODEL2107080001":
+
+    if model_id != "MODEL1805180007":
+        # "MODEL2107080001":
         pass
     else:
         old_metadata = get_old_metadata(model_id)
