@@ -18,7 +18,7 @@ import Bio.Entrez
 final_dir = r"C:\Users\Lucian\Desktop\temp-biomodels\final/"
 masters_filename = "all_masters.json"
 dev_biomodels = "https://wwwdev.ebi.ac.uk/biomodels/"
-prod_biomodels = "https://www.ebi.ac.uk/biomodels/"
+prod_biomodels = "https://www.ebi.ac.uk/biomodels/api/model/"
 
 AUTH_FILE = "credentials.json"
 # root_biomodels = "http://localhost:8080/biomodels/"
