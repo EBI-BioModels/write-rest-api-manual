@@ -278,6 +278,11 @@ def get_new_metadata(biomd_id, old_metadata, master, upload_prev):
     
     if len(metadata["files"]["main"]) == 0:
         raise Exception("No 'main' file for entry " + biomd_id)
+    
+    # Add contributor role, check the role name using the following service
+    # https://www(dev).ebi.ac.uk/biomodels/contributor/list
+    metadata["contributorRole"] = "Annotation Curator"
+
     return metadata
 
 

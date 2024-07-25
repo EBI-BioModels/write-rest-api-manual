@@ -40,5 +40,6 @@ Then, appending some other properties to that JSON file. These properties are ex
 - "readme_submission": "This is the first sumbmission done via API": `optional`.
 - "other_info": "SBML Model Format": `optional`.
 - "isMetadataSubmission": true|false: `optional`.
+- "contributorRole": `"Curator", "Modeller", "Submitter", etc`. It is an `optional` attribute. See the full list of the curator roles using the following service: [https://www(dev).ebi.ac.uk/biomodels/contributor/role](https://www(dev).ebi.ac.uk/biomodels/contributor/role)
 
 The other fields are explainable as what their names are.

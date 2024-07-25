@@ -80,6 +80,8 @@ def get_new_metadata(_old_metadata):
     if "publication" in _old_metadata:
         metadata["publication"] = _old_metadata["publication"]
 
+    # Add contributor role
+    metadata["contributorRole"] = "Annotation Curator"
     return metadata
 
 
