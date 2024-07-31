@@ -36,6 +36,11 @@ headers = {
     "Authorization": "Bearer " + credentials["access_token"]
 }
 
+def update_model_filenames(updated_filenames, _metadata):
+    all_model_files = _metadata["files"]["main"] + _metadata["files"]["additional"]
+    for file in all_model_files:
+        file["name"] = updated_filenames[file["name"]]
+
 
 def get_old_metadata(_model_id):
     URL = root_biomodels + "api/model/" + _model_id + "?format=json"
@@ -91,12 +96,14 @@ def update_model(_model_id, metadata, _headers):
     new_files = []
     for _root, _dirs, _files in os.walk(final_dir + _model_id):
         new_files.extend(_files)
+    corrected_filenames = {}
     for filename in _files:
         uploaded_files = {"file": open(final_dir + _model_id + "/" + filename, "rb")}
         ret = requests.post(DOWNUP_SVR + "services/upload",
                             headers=_headers, files=uploaded_files)
         ret.raise_for_status()
-        print(ret.json())
+        corrected_filenames[filename] = ret.json()["after_uploaded_filename"]
+    update_model_filenames(corrected_filenames, metadata)
     params = {
         "format": "json"
     }
