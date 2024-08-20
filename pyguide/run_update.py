@@ -18,7 +18,7 @@ import Bio.Entrez
 final_dir = r"C:\Users\Lucian\Desktop\temp-biomodels\final/"
 masters_filename = "all_masters.json"
 dev_biomodels = "https://wwwdev.ebi.ac.uk/biomodels/"
-prod_biomodels = "https://www.ebi.ac.uk/biomodels/api/model/"
+prod_biomodels = "https://www.ebi.ac.uk/biomodels/"
 
 AUTH_FILE = "credentials.json"
 # root_biomodels = "http://localhost:8080/biomodels/"
@@ -177,6 +177,9 @@ def get_new_metadata(biomd_id, old_metadata, master, upload_prev):
     metadata["isMetadataSubmission"] = False
     metadata["isAmend"] = upload_prev
     metadata["comment"] = "CRBM-sponsored manual and automated updates."
+    # Add contributor role, check the role name using the following service
+    # https://www(dev).ebi.ac.uk/biomodels/contributor/list
+    metadata["contributorRole"] = "Curator"
     metadata["files"] = {"main": [], "additional": []}
     if "modellingApproach" in old_metadata and old_metadata["modellingApproach"] is not None:
         metadata["modelling_approach"] = old_metadata["modellingApproach"]["name"]
@@ -279,10 +282,6 @@ def get_new_metadata(biomd_id, old_metadata, master, upload_prev):
     if len(metadata["files"]["main"]) == 0:
         raise Exception("No 'main' file for entry " + biomd_id)
     
-    # Add contributor role, check the role name using the following service
-    # https://www(dev).ebi.ac.uk/biomodels/contributor/list
-    metadata["contributorRole"] = "Annotation Curator"
-
     return metadata
 
 
@@ -298,13 +297,13 @@ def upload_model_files(biomd_id, submission_folder, auth, metadata):
     for root, dirs, files in os.walk(final_dir + biomd_id):
         new_files.extend(files)
     for filename in new_files:
-        print(filename)
+        # print(filename)
         files = {"file": open(final_dir + biomd_id + "/" + filename, "rb")}
-        ret = requests.post(dev_biomodels + "/services/upload", headers=upload, files=files)
+        ret = requests.post(prod_biomodels + "/services/upload", headers=upload, files=files)
         ret.raise_for_status()
         # print(ret.json())
-    ret = requests.post(dev_biomodels + "api/submission/update/", headers=upload, params=params, json=metadata)
-    # ret.raise_for_status()
+    ret = requests.post(prod_biomodels + "api/submission/update/", headers=upload, params=params, json=metadata)
+    ret.raise_for_status()
     # print(ret)
 
 
@@ -319,7 +318,7 @@ credentials = json.load(f)
 f.close()
 
 # get_access_credentials = requests.post(
-#     "https://wwwdev.ebi.ac.uk/biomodels/api/login", json = credentials)
+#     "https://www.ebi.ac.uk/biomodels/api/login", json = credentials)
 # get_access_credentials.raise_for_status()
 
 # access_token = get_access_credentials.json()["access_token"]
@@ -338,25 +337,25 @@ no_abstract = [469, 470, 471, 472, 473, 710, 716, 717, 1052, 1053, 1055, 1056, 1
 
 
 
-for i in range(1, 707): #1081):
+for i in range(1, 1081): #1081):
 # for i in [459, 460, 461, 618, 627]:
     if i in [649, 694, 992, 993, 1049, 1050, 1051, 1066, 1067, 1068, 1069, 1070, 1071, 1073, 1074, 1075, 1076, ]: #Don't exist or aren't SBML
         continue
     num = f'{i:010d}'
     biomd_id = "BIOMD" + num
     print("Updating biomodel", biomd_id)
-    oldmd = requests.get(prod_biomodels + biomd_id, params={"format": "json"})
+    oldmd = requests.get(prod_biomodels + "api/model/" + biomd_id, params={"format": "json"})
     oldmetadata = oldmd.json()
     # print(json.dumps(oldmetadata, indent=4, sort_keys=True))
     
     authorization = {
         "Authorization": "Bearer " + credentials["access_token"],
     }
-    # recentmd = requests.get(dev_biomodels + biomd_id, params={"format": "json"}, headers=authorization)
+    # recentmd = requests.get(prod_biomodels + biomd_id, params={"format": "json"}, headers=authorization)
     # recentmetadata = recentmd.json()
     # uploaded_previously = recentmetadata['history']['revisions'][-1]['submitter'] == "Lucian Smith"
     #Doesn't work.  For now:
-    uploaded_previously = i < 750
+    uploaded_previously = i < 639
 
 
     new_metadata = get_new_metadata(biomd_id, oldmetadata, masters[biomd_id], uploaded_previously)  
