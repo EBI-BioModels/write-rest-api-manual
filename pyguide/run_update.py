@@ -110,6 +110,24 @@ other_abstracts = {"10.1016/j.jmaa.2008.05.060": "We perform a qualitative analy
                    "10.1016/j.jtbi.2004.11.011": "Caspases are thought to be important players in the execution process of apoptosis. Inhibitors of apoptosis (IAPs) are able to block caspases and therefore apoptosis. The fact that a subgroup of the IAP family inhibits active caspases implies that not each caspase activation necessarily leads to apoptosis. In such a scenario, however, processed and enzymically active caspases should somehow be removed. Indeed, IAP–caspase complexes covalently bind ubiquitin, resulting in degradation by the 26S proteasome. Following release from mitochondria, IAP antagonists (e.g. second mitochondrial activator of caspases (Smac)) inactivate IAPs. Moreover, although pro-apoptotic factors such as irradiation or anti-cancer drugs may release Smac from mitochondria in tumor cells, high cytoplasmic survivin and ML-IAP levels might be able to neutralize it and, consequently, IAPs would further be able to bind activated caspases. Here, we propose a simple mathematical model, describing the molecular interactions between Smac deactivators, Smac, IAPs, and caspase-3, including the requirements for both induction and prevention of apoptosis, respectively. In addition, we predict a novel mechanism of caspase-3 degradation that might be particularly relevant in long-living cells.",
                    }
 
+approach_to_name = {
+    "ODE": "ordinary differential equation model",
+    "DAE": 'differential algebraic equation model',
+    "qual": 'logical model',
+    "FBC": 'constraint-based model',
+    "delay":'delayed differential equation model',
+    "MAMO_0000046": "ordinary differential equation model",
+    "MAMO_0000090": "differential algebraic equation model",
+    "MAMO_0000030": "logical model",
+    "MAMO_0000009": "constraint-based model",
+    "MAMO_0000089": "delayed differential equation model",
+    "MAMO_0000203": "physiologically based pharmacokinetic model",
+    "MAMO_0000003": "mathematical model",
+    "MAMO_0000020": "pharmacodynamic model",
+    "MAMO_0000038": "signalling network",
+    "MAMO_0000028": "population model",
+    }
+
 #Pull in the official list of 'template' SED-ML entries.
 nosed_file = r"C:\Users\Lucian\Desktop\temp-biomodels\biosimulations_pipeline\noSED.txt"
 nosed = []
@@ -150,12 +168,10 @@ def get_entrez_abstract(db, id):
 
 def get_new_metadata(biomd_id, old_metadata, master, upload_prev):
     metadata = {}
-    for key in ["name", "description", "publication", "submissionId", "publicationId", "format"]:
+    for key in ["name", "description", "publication", "submissionId", "publicationId", "format", "modellingApproach", ]:
         if key in old_metadata:
             metadata[key] = old_metadata[key]
-        else:
-            # print("Entry", biomd_id, "missing metadata for", key)
-            assert(key == "description")
+        elif key == "description":
             g = rdflib.Graph()
             g.parse(r"C:\Users\Lucian\Desktop\temp-biomodels\final\\" + biomd_id + r"\metadata.rdf")
             # print(len(g))
@@ -171,6 +187,9 @@ def get_new_metadata(biomd_id, old_metadata, master, upload_prev):
             else:
                 metadata[key] = label
             # print(metadata[key])
+        else:
+            # print("Entry", biomd_id, "missing metadata for", key)
+            assert(key == "modellingApproach")
             
     metadata["readme_submission"] = "Curation updates for SED-ML and validity, from the Center for Reproducible Biomedical Modeling, via Lucian Smith."
     metadata["other_info"] = "SBML Model Format"
@@ -181,10 +200,28 @@ def get_new_metadata(biomd_id, old_metadata, master, upload_prev):
     # https://www(dev).ebi.ac.uk/biomodels/contributor/list
     metadata["contributorRole"] = "Curator"
     metadata["files"] = {"main": [], "additional": []}
-    if "modellingApproach" in old_metadata and old_metadata["modellingApproach"] is not None:
-        metadata["modelling_approach"] = old_metadata["modellingApproach"]["name"]
-    elif "modelling_approach" in old_metadata and old_metadata["modelling_approach"] is not None:
-        metadata["modelling_approach"] = old_metadata["modelling_approach"]
+    
+    approach = ""
+    if "modellingApproach" in metadata:
+        approach = metadata["modellingApproach"]["accession"]
+    if "MAMO" not in approach:
+        approach = "ODE"
+        with open(final_dir + "/" + biomd_id + "/" + master, encoding="utf-8") as f:
+            line = f.read();
+            if "MAMO_00" in line:
+                pos = line.find("MAMO_00")
+                approach = line[pos:pos+12]
+            elif 'fbc:' in line:
+                approach = "FBC"
+            elif "qual:" in line:
+                approach = "qual"
+            elif "algebraicRule" in line:
+                approach = "DAE"
+            elif "sbml/symbols/delay" in line:
+                approach = "delay"
+        metadata["modelling_approach"] = approach_to_name[approach]
+        if "modellingApproach" in metadata:
+            del metadata['modellingApproach'] #Unnecessary, but cleaner.
 
     # Now update all the files:
     oldfiles = {}
@@ -307,10 +344,8 @@ def upload_model_files(biomd_id, submission_folder, auth, metadata):
     # print(ret)
 
 
-def update_modelling_approach(submission_data, modelling_approach_name):
-    submission_data["modelling_approach"] = modelling_approach_name
-    submission_data["comment"] = "Added the modelling approach"
-    return submission_data
+
+
 
 
 f = open(AUTH_FILE, "r")
@@ -351,11 +386,12 @@ for i in range(1, 1081): #1081):
     authorization = {
         "Authorization": "Bearer " + credentials["access_token"],
     }
-    # recentmd = requests.get(prod_biomodels + biomd_id, params={"format": "json"}, headers=authorization)
-    # recentmetadata = recentmd.json()
-    # uploaded_previously = recentmetadata['history']['revisions'][-1]['submitter'] == "Lucian Smith"
-    #Doesn't work.  For now:
-    uploaded_previously = i < 639
+    recentmd = requests.get(prod_biomodels + "api/model/" + biomd_id, params={"format": "json"}, headers=authorization)
+    recentmetadata = recentmd.json()
+    uploaded_previously = recentmetadata['history']['revisions'][-1]['submitter'] == "Lucian Smith"
+
+    # if uploaded_previously != (i != 601):
+    #     assert(False)
 
 
     new_metadata = get_new_metadata(biomd_id, oldmetadata, masters[biomd_id], uploaded_previously)  
