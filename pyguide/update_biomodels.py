@@ -58,6 +58,13 @@ def get_new_metadata(_old_metadata):
     metadata["readme_submission"] = "Updated the model revision via REST API."
     metadata["other_info"] = "SBML Model Format"
     metadata["isMetadataSubmission"] = False
+    if "modellingApproach" in _old_metadata and _old_metadata["modellingApproach"] is not None:
+        metadata["modelling_approach"] = _old_metadata["modellingApproach"]["name"]
+    elif "modelling_approach" in _old_metadata and _old_metadata["modelling_approach"] is not None:
+        metadata["modelling_approach"] = _old_metadata["modelling_approach"]
+
+    # metadata["modelling_approach"] = "Deep Learning"
+    metadata["isMetadataSubmission"] = True
     metadata["isAmend"] = True
     metadata["comment"] = "Corrected the annotations and added the article in PDF."
     metadata["files"] = {"main": _old_metadata["files"]["main"], "additional": []}
