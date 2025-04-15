@@ -9,22 +9,42 @@ Created on Wed Jun 12 16:14:37 2024
 
 import os
 import json
+import sys
+
 import requests
 import uuid
 
-final_dir = r"/Users/tnguyen/ownCloud/EBI/biomodels/temp-biomodels/final/"
-final_dir = r"/Users/tnguyen/ownCloud/EBI/biomodels/api-submission/models4test/wwwlocal/"
-final_dir = r"/Users/tnguyen/ownCloud/EBI/biomodels/api-submission/models4test/wwwdev/"
-masters_filename = r"C:\Users\Lucian\Desktop\temp-biomodels\all_masters.json"
-masters_filename = r"/Users/tnguyen/ownCloud/EBI/biomodels/api-submission/pyguide/all_masters.json"
-root_biomodels = "https://wwwdev.ebi.ac.uk/biomodels/"
-# root_biomodels = "http://localhost:8080/biomodels/"
-DOWNUP_SVR = "http://localhost:7000/biomodels/"
-DOWNUP_SVR = "https://wwwdev.ebi.ac.uk/biomodels/"
+if len(sys.argv) <= 1:
+    print("Please specify a server. Otherwise, we use the local server.")
+    server = "local"
+else:
+    server = sys.argv[1]
+if not server:
+    print("Please specify a server. Otherwise, we use the local server.")
+# hardcode server var here
+server = "local"
+if not server:
+    server = "local"
 
-f = open("credentials.json", "r")
+if "local" == server:
+    file_server = "http://localhost:7001/biomodels/"
+    final_dir = r"/Users/tnguyen/ownCloud/EBI/biomodels/api-submission/models4test/wwwlocal/"
+    masters_filename = r"/Users/tnguyen/ownCloud/EBI/biomodels/api-submission/pyguide/all_masters.json"
+    root_biomodels = "http://localhost:8080/biomodels/"
+elif "dev" == server:
+    file_server = "https://wwwdev.ebi.ac.uk/biomodels/"
+    final_dir = r"/Users/tnguyen/ownCloud/EBI/biomodels/api-submission/models4test/wwwdev/"
+    masters_filename = r"C:\Users\Lucian\Desktop\temp-biomodels\all_masters.json"
+    root_biomodels = "https://wwwdev.ebi.ac.uk/biomodels/"
+else:
+    final_dir = r"/Users/tnguyen/ownCloud/EBI/biomodels/temp-biomodels/final/"
+    masters_filename = r"C:\Users\Lucian\Desktop\temp-biomodels\all_masters.json"
+    root_biomodels = "https://www.ebi.ac.uk/biomodels/"
+    file_server = "https://www.ebi.ac.uk/biomodels/"
+
+
 f = open("../credentials/local-khang.json", "r")
-f = open("../credentials/wwwdev-khang.json", "r")
+# f = open("../credentials/wwwdev-khang.json", "r")
 credentials = json.load(f)
 f.close()
 
