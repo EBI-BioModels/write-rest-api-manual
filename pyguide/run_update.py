@@ -36,7 +36,7 @@ manual_descriptions = {"BIOMD0000000010.png": "Manually generated Reaction graph
                        "Text_S1.pdf": "Supplemental information from journal article.",
                        "MAP_FROG.zip": "FROG analysis in json and tsv files.",
                        "MAP_MEMOTE.pdf": "PDF of MEMOTE report of SBML model.",
-}
+                       }
 
 renamed_files = {"BIOMD0000000683.cps": "MODEL1006230062.cps",
                  "BIOMD0000000683.xml": "MODEL1006230062.cps",
@@ -96,26 +96,27 @@ renamed_files = {"BIOMD0000000683.cps": "MODEL1006230062.cps",
                  "BIOMD0000000627.sedml": "BIOMD0000000627_SED-ML.xml",
                  }
 
-other_abstracts = {"10.1016/j.jmaa.2008.05.060": "We perform a qualitative analysis of a differential equation that was originally introduced by Stortelder, Hemker and Hemker to model the formation of thrombin, and discuss issues of controllability and stabilizability. Results include a general proof of convergence to equilibrium, and of local exponential stabilizability.",
-                   "10.1089/ind.2013.0003": "Genome-scale kinetic models of metabolism are important for rational design of the metabolic engineering required for industrial biotechnology applications. They allow one to predict the alterations needed to optimize the flux or yield of the compounds of interest, while keeping the other functions of the host organism to a minimal, but essential, level. We define a pipeline for the generation of genome-scale kinetic models from reconstruction data. To build such a model, inputs of all concentrations, fluxes, rate laws, and kinetic parameters are required. However, we propose typical estimates for these numbers when experimental data are not available. While little data are required to produce the model, the pipeline ensures consistency with any known flux or concentration data, or any kinetic constants. We apply the method to create genome-scale models of Escherichia coli and Saccharomyces cerevisiae. We go on to show how these may be used to expand a detailed model of yeast glycolysis to the genome level.",
-                   "10.3182/20120829-3-hu-2029.00029": "The understanding of how influenza virus infection activates the immune system is crucial to designing prophylactic and therapeutic strategies against the infection. Nevertheless, the immune response to influenza virus infection is complex and remains largely unknown. In this paper we focus in the innate immune response to influenza virus using a mathematical model, based on interferon-induced resistance to infection of respiratory epithelial cells and the clearance of infected cells by natural killers. Simulation results show the importance of IFN-I to prevent new infections in epithelial cells and to stop the viral explosion during the first two days after infection. Nevertheless, natural killers response might be the most relevant for the first depletion in viral load due to the elimination of infected cells. Based on the reproductive number, the innate immune response is important to control the infection, although it would not be enough to clear completely the virus. The effective coordination between innate and adaptive immune response is essential for the virus eradication.",
-                   "10.1016/j.physa.2017.08.139": "A novel SEIS epidemic model with the impact of media is introduced. By analyzing the characteristic equation of equilibrium, the basic reproduction number is obtained and the stability of the steady states is proved. The occurrence of a forward, backward and Hopf bifurcation is derived. Numerical simulations and sensitivity analysis are performed. Our results manifest that media can regard as a good indicator in controlling the emergence and spread of the epidemic disease.",
-                   "10.1016/j.idm.2018.03.004": "Due to the outbreaks of Highly Pathogenic Avian Influenza A (HPAI) H5N6 in the Philippines (particularly in Pampanga and Nueva Ecija) in August 2017, there has been an increase in the need to cull the domestic birds to control the spread of the infection. However, this control method poses a negative impact on the poultry industry. In addition, the pathogenicity and transmissibility of the H5N6 in both the birds and the humans remain largely unknown which call for the necessity to develop more strategic control methods for the virus. In this study, we constructed a mathematical model for the bilinear and half-saturated incidence to compare their corresponding effect on transmission dynamics of H5N6. The simulations of half-saturated incidence model were similar to what occurred during the H5N6 outbreak (2017) in the Philippines. Instead of culling the birds, we implemented other control strategies such as non-medicinal (personal protection and poultry isolation) and medicinal (poultry vaccination) ways to prevent, reduce, and control the rate of the H5N6 virus transmission. Among the proposed control strategies, we have shown that the poultry isolation strategy is still the most effective in reducing the infected birds.",
-                   "10.3390/math8081285": "Changes in diet are heavily associated with high mortality rates in several types of cancer. In this paper, a new mathematical model of tumor cells growth is established to dynamically demonstrate the effects of abnormal cell progression on the cells affected by the tumor in terms of the immune system’s functionality and normal cells’ dynamic growth. This model is called the normal-tumor-immune-unhealthy diet model (NTIUNHDM) and governed by a system of ordinary differential equations. In the NTIUNHDM, there are three main populations normal cells, tumor cell and immune cells. The model is discussed analytically and numerically by utilizing a fourth-order Runge–Kutta method. The dynamic behavior of the NTIUNHDM is discussed by analyzing the stability of the system at various equilibrium points and the Mathematica software is used to simulate the model. From analysis and simulation of the NTIUNHDM, it can be deduced that instability of the response stage, due to a weak immune system, is classified as one of the main reasons for the coexistence of abnormal cells and normal cells. Additionally, it is obvious that the NTIUNHDM has only one stable case when abnormal cells begin progressing into early stages of tumor cells such that the immune cells are generated once. Thus, early boosting of the immune system might contribute to reducing the risk of cancer.",
-                   "10.1038/s41598-020-62526-6": "Biofilms are composed of microorganisms attached to a solid surface or floating on top of a liquid surface. They pose challenges in the field of medicine but can also have useful applications in industry. Regulation of biofilm growth is complex and still largely elusive. Oscillations are thought to be advantageous for biofilms to cope with nutrient starvation and chemical attacks. Recently, a minimal mathematical model has been employed to describe the oscillations in Bacillus subtilis biofilms. In this paper, we investigate four different modifications to that minimal model in order to better understand the oscillations in biofilms. Our first modification is towards making a gradient of metabolites from the center of the biofilm to the periphery. We find that it does not improve the model and is therefore, unnecessary. We then use realistic Michaelis-Menten kinetics to replace the highly simple mass-action kinetics for one of the reactions. Further, we use reversible reactions to mimic the diffusion in biofilms. As the final modification, we check the combined effect of using Michaelis-Menten kinetics and reversible reactions on the model behavior. We find that these two modifications alone or in combination improve the description of the biological scenario.",
-                   "10.1038/s41598-018-20348-7": "We have recently demonstrated that the rate-limiting enzymes in human glucose metabolism organize into cytoplasmic clusters to form a multienzyme complex, the glucosome, in at least three different sizes. Quantitative high-content imaging data support a hypothesis that the glucosome clusters regulate the direction of glucose flux between energy metabolism and building block biosynthesis in a cluster size-dependent manner. However, direct measurement of their functional contributions to cellular metabolism at subcellular levels has remained challenging. In this work, we develop a mathematical model using a system of ordinary differential equations, in which the association of the rate-limiting enzymes into multienzyme complexes is included as an essential element. We then demonstrate that our mathematical model provides a quantitative principle to simulate glucose flux at both subcellular and population levels in human cancer cells. Lastly, we use the model to simulate 2-deoxyglucose-mediated alteration of glucose flux in a population level based on subcellular high-content imaging data. Collectively, we introduce a new mathematical model for human glucose metabolism, which promotes our understanding of functional roles of differently sized multienzyme complexes in both single-cell and population levels.",
-                   "10.1016/j.jtbi.2021.110685": "Haematopoiesis is the process of generation of blood cells. Lymphopoiesis generates lymphocytes, the cells in charge of the adaptive immune response. Disruptions of this process are associated with diseases like leukaemia, which is especially incident in children. The characteristics of self-regulation of this process make them suitable for a mathematical study.<p></p><p></p>In this paper we develop mathematical models of lymphopoiesis using currently available data. We do this by drawing inspiration from existing structured models of cell lineage development and integrating them with paediatric bone marrow data, with special focus on regulatory mechanisms. A formal analysis of the models is carried out, giving steady states and their stability conditions. We use this analysis to obtain biologically relevant regions of the parameter space and to understand the dynamical behaviour of B-cell renovation. Finally, we use numerical simulations to obtain further insight into the influence of proliferation and maturation rates on the reconstitution of the cells in the B line. We conclude that a model including feedback regulation of cell proliferation represents a biologically plausible depiction for B-cell reconstitution in bone marrow. Research into haematological disorders could benefit from a precise dynamical description of B lymphopoiesis.",
-                   "10.1016/j.jtbi.2020.110252": "The objective of this study is to evaluate the role of cooperativity, captured by the Hill coefficient, in a minimal mathematical model describing the interactions between p53 and miR-34a. The model equations are analyzed for negative, none and normal cooperativity using a specific version of bifurcation theory and they are solved numerically. Special attention is paid to the sign of so-called first Lyapunov value. Interpretations of the results are given, both according to dynamic theory and in biological terms. In terms of cell signaling, we propose the hypothesis that when the outgoing signal of a system spends a physiologically significant amount of time outside of its equilibrium state, then the value of that signal can be sampled at any point along the trajectory towards that equilibrium and indeed, at multiple points. Coupled with non-linear behavior, such as that caused by cooperativity, this feature can account for a complex and varied response, which p53 is known for. From dynamical point of view, we found that when cooperativity is negative, the system has only one stable equilibrium point. In the absence of cooperativity, there is a single unstable equilibrium point with a critical boundary of stability. In the case with normal cooperativity, the system can have one, two, or three steady states with both, bi-stability and bi-instability occurring.",
-                   "10.1016/j.cub.2022.04.016": "In 1996, Kim Nasmyth1 proposed that the eukaryotic cell cycle is an alternating sequence of transitions from G1 to S-G2-M and back again. These two phases correlate to high activity of cyclin-dependent kinases (CDKs) that trigger S-G2-M events and CDK antagonists that stabilize G1 phase. We associated these “alternative phases” with the coexistence of two stable steady states of the biochemical reactions among CDKs and their antagonists. Transitions between these steady states (G1-to-S and M-to-G1) are driven by “helper” proteins. The fact that the transitions are irreversible is guaranteed by a “latching” property of the molecular switches, as we have argued in previous publications. Here, we show that if the latch is broken, then the biochemical reactions can swing back-and-forth across the transitions; either G1-S-G1-S … (periodic DNA replication without mitosis or cell division) or M-(G1)-M-(G1) … (periodic Cdc14 release, without fully exiting mitosis). Using mathematical modeling of the molecular control circuit in budding yeast, we provide a fresh account of aberrant cell cycles in mutant strains: endoreplication in the clb1-5Δ strain and periodic release and resequestration of Cdc14 (an “exit” phosphatase) in the CLB2kdΔ strain.7,8 In our opinion, these “endocycles” are not autonomous oscillatory modules that must be entrained by the CDK oscillator but rather inadvertent and deleterious oscillations that are normally suppressed by the CDK latching-gate mechanism.",
-                   "10.1016/j.jtbi.2004.11.011": "Caspases are thought to be important players in the execution process of apoptosis. Inhibitors of apoptosis (IAPs) are able to block caspases and therefore apoptosis. The fact that a subgroup of the IAP family inhibits active caspases implies that not each caspase activation necessarily leads to apoptosis. In such a scenario, however, processed and enzymically active caspases should somehow be removed. Indeed, IAP–caspase complexes covalently bind ubiquitin, resulting in degradation by the 26S proteasome. Following release from mitochondria, IAP antagonists (e.g. second mitochondrial activator of caspases (Smac)) inactivate IAPs. Moreover, although pro-apoptotic factors such as irradiation or anti-cancer drugs may release Smac from mitochondria in tumor cells, high cytoplasmic survivin and ML-IAP levels might be able to neutralize it and, consequently, IAPs would further be able to bind activated caspases. Here, we propose a simple mathematical model, describing the molecular interactions between Smac deactivators, Smac, IAPs, and caspase-3, including the requirements for both induction and prevention of apoptosis, respectively. In addition, we predict a novel mechanism of caspase-3 degradation that might be particularly relevant in long-living cells.",
-                   }
+other_abstracts = {
+    "10.1016/j.jmaa.2008.05.060": "We perform a qualitative analysis of a differential equation that was originally introduced by Stortelder, Hemker and Hemker to model the formation of thrombin, and discuss issues of controllability and stabilizability. Results include a general proof of convergence to equilibrium, and of local exponential stabilizability.",
+    "10.1089/ind.2013.0003": "Genome-scale kinetic models of metabolism are important for rational design of the metabolic engineering required for industrial biotechnology applications. They allow one to predict the alterations needed to optimize the flux or yield of the compounds of interest, while keeping the other functions of the host organism to a minimal, but essential, level. We define a pipeline for the generation of genome-scale kinetic models from reconstruction data. To build such a model, inputs of all concentrations, fluxes, rate laws, and kinetic parameters are required. However, we propose typical estimates for these numbers when experimental data are not available. While little data are required to produce the model, the pipeline ensures consistency with any known flux or concentration data, or any kinetic constants. We apply the method to create genome-scale models of Escherichia coli and Saccharomyces cerevisiae. We go on to show how these may be used to expand a detailed model of yeast glycolysis to the genome level.",
+    "10.3182/20120829-3-hu-2029.00029": "The understanding of how influenza virus infection activates the immune system is crucial to designing prophylactic and therapeutic strategies against the infection. Nevertheless, the immune response to influenza virus infection is complex and remains largely unknown. In this paper we focus in the innate immune response to influenza virus using a mathematical model, based on interferon-induced resistance to infection of respiratory epithelial cells and the clearance of infected cells by natural killers. Simulation results show the importance of IFN-I to prevent new infections in epithelial cells and to stop the viral explosion during the first two days after infection. Nevertheless, natural killers response might be the most relevant for the first depletion in viral load due to the elimination of infected cells. Based on the reproductive number, the innate immune response is important to control the infection, although it would not be enough to clear completely the virus. The effective coordination between innate and adaptive immune response is essential for the virus eradication.",
+    "10.1016/j.physa.2017.08.139": "A novel SEIS epidemic model with the impact of media is introduced. By analyzing the characteristic equation of equilibrium, the basic reproduction number is obtained and the stability of the steady states is proved. The occurrence of a forward, backward and Hopf bifurcation is derived. Numerical simulations and sensitivity analysis are performed. Our results manifest that media can regard as a good indicator in controlling the emergence and spread of the epidemic disease.",
+    "10.1016/j.idm.2018.03.004": "Due to the outbreaks of Highly Pathogenic Avian Influenza A (HPAI) H5N6 in the Philippines (particularly in Pampanga and Nueva Ecija) in August 2017, there has been an increase in the need to cull the domestic birds to control the spread of the infection. However, this control method poses a negative impact on the poultry industry. In addition, the pathogenicity and transmissibility of the H5N6 in both the birds and the humans remain largely unknown which call for the necessity to develop more strategic control methods for the virus. In this study, we constructed a mathematical model for the bilinear and half-saturated incidence to compare their corresponding effect on transmission dynamics of H5N6. The simulations of half-saturated incidence model were similar to what occurred during the H5N6 outbreak (2017) in the Philippines. Instead of culling the birds, we implemented other control strategies such as non-medicinal (personal protection and poultry isolation) and medicinal (poultry vaccination) ways to prevent, reduce, and control the rate of the H5N6 virus transmission. Among the proposed control strategies, we have shown that the poultry isolation strategy is still the most effective in reducing the infected birds.",
+    "10.3390/math8081285": "Changes in diet are heavily associated with high mortality rates in several types of cancer. In this paper, a new mathematical model of tumor cells growth is established to dynamically demonstrate the effects of abnormal cell progression on the cells affected by the tumor in terms of the immune system’s functionality and normal cells’ dynamic growth. This model is called the normal-tumor-immune-unhealthy diet model (NTIUNHDM) and governed by a system of ordinary differential equations. In the NTIUNHDM, there are three main populations normal cells, tumor cell and immune cells. The model is discussed analytically and numerically by utilizing a fourth-order Runge–Kutta method. The dynamic behavior of the NTIUNHDM is discussed by analyzing the stability of the system at various equilibrium points and the Mathematica software is used to simulate the model. From analysis and simulation of the NTIUNHDM, it can be deduced that instability of the response stage, due to a weak immune system, is classified as one of the main reasons for the coexistence of abnormal cells and normal cells. Additionally, it is obvious that the NTIUNHDM has only one stable case when abnormal cells begin progressing into early stages of tumor cells such that the immune cells are generated once. Thus, early boosting of the immune system might contribute to reducing the risk of cancer.",
+    "10.1038/s41598-020-62526-6": "Biofilms are composed of microorganisms attached to a solid surface or floating on top of a liquid surface. They pose challenges in the field of medicine but can also have useful applications in industry. Regulation of biofilm growth is complex and still largely elusive. Oscillations are thought to be advantageous for biofilms to cope with nutrient starvation and chemical attacks. Recently, a minimal mathematical model has been employed to describe the oscillations in Bacillus subtilis biofilms. In this paper, we investigate four different modifications to that minimal model in order to better understand the oscillations in biofilms. Our first modification is towards making a gradient of metabolites from the center of the biofilm to the periphery. We find that it does not improve the model and is therefore, unnecessary. We then use realistic Michaelis-Menten kinetics to replace the highly simple mass-action kinetics for one of the reactions. Further, we use reversible reactions to mimic the diffusion in biofilms. As the final modification, we check the combined effect of using Michaelis-Menten kinetics and reversible reactions on the model behavior. We find that these two modifications alone or in combination improve the description of the biological scenario.",
+    "10.1038/s41598-018-20348-7": "We have recently demonstrated that the rate-limiting enzymes in human glucose metabolism organize into cytoplasmic clusters to form a multienzyme complex, the glucosome, in at least three different sizes. Quantitative high-content imaging data support a hypothesis that the glucosome clusters regulate the direction of glucose flux between energy metabolism and building block biosynthesis in a cluster size-dependent manner. However, direct measurement of their functional contributions to cellular metabolism at subcellular levels has remained challenging. In this work, we develop a mathematical model using a system of ordinary differential equations, in which the association of the rate-limiting enzymes into multienzyme complexes is included as an essential element. We then demonstrate that our mathematical model provides a quantitative principle to simulate glucose flux at both subcellular and population levels in human cancer cells. Lastly, we use the model to simulate 2-deoxyglucose-mediated alteration of glucose flux in a population level based on subcellular high-content imaging data. Collectively, we introduce a new mathematical model for human glucose metabolism, which promotes our understanding of functional roles of differently sized multienzyme complexes in both single-cell and population levels.",
+    "10.1016/j.jtbi.2021.110685": "Haematopoiesis is the process of generation of blood cells. Lymphopoiesis generates lymphocytes, the cells in charge of the adaptive immune response. Disruptions of this process are associated with diseases like leukaemia, which is especially incident in children. The characteristics of self-regulation of this process make them suitable for a mathematical study.<p></p><p></p>In this paper we develop mathematical models of lymphopoiesis using currently available data. We do this by drawing inspiration from existing structured models of cell lineage development and integrating them with paediatric bone marrow data, with special focus on regulatory mechanisms. A formal analysis of the models is carried out, giving steady states and their stability conditions. We use this analysis to obtain biologically relevant regions of the parameter space and to understand the dynamical behaviour of B-cell renovation. Finally, we use numerical simulations to obtain further insight into the influence of proliferation and maturation rates on the reconstitution of the cells in the B line. We conclude that a model including feedback regulation of cell proliferation represents a biologically plausible depiction for B-cell reconstitution in bone marrow. Research into haematological disorders could benefit from a precise dynamical description of B lymphopoiesis.",
+    "10.1016/j.jtbi.2020.110252": "The objective of this study is to evaluate the role of cooperativity, captured by the Hill coefficient, in a minimal mathematical model describing the interactions between p53 and miR-34a. The model equations are analyzed for negative, none and normal cooperativity using a specific version of bifurcation theory and they are solved numerically. Special attention is paid to the sign of so-called first Lyapunov value. Interpretations of the results are given, both according to dynamic theory and in biological terms. In terms of cell signaling, we propose the hypothesis that when the outgoing signal of a system spends a physiologically significant amount of time outside of its equilibrium state, then the value of that signal can be sampled at any point along the trajectory towards that equilibrium and indeed, at multiple points. Coupled with non-linear behavior, such as that caused by cooperativity, this feature can account for a complex and varied response, which p53 is known for. From dynamical point of view, we found that when cooperativity is negative, the system has only one stable equilibrium point. In the absence of cooperativity, there is a single unstable equilibrium point with a critical boundary of stability. In the case with normal cooperativity, the system can have one, two, or three steady states with both, bi-stability and bi-instability occurring.",
+    "10.1016/j.cub.2022.04.016": "In 1996, Kim Nasmyth1 proposed that the eukaryotic cell cycle is an alternating sequence of transitions from G1 to S-G2-M and back again. These two phases correlate to high activity of cyclin-dependent kinases (CDKs) that trigger S-G2-M events and CDK antagonists that stabilize G1 phase. We associated these “alternative phases” with the coexistence of two stable steady states of the biochemical reactions among CDKs and their antagonists. Transitions between these steady states (G1-to-S and M-to-G1) are driven by “helper” proteins. The fact that the transitions are irreversible is guaranteed by a “latching” property of the molecular switches, as we have argued in previous publications. Here, we show that if the latch is broken, then the biochemical reactions can swing back-and-forth across the transitions; either G1-S-G1-S … (periodic DNA replication without mitosis or cell division) or M-(G1)-M-(G1) … (periodic Cdc14 release, without fully exiting mitosis). Using mathematical modeling of the molecular control circuit in budding yeast, we provide a fresh account of aberrant cell cycles in mutant strains: endoreplication in the clb1-5Δ strain and periodic release and resequestration of Cdc14 (an “exit” phosphatase) in the CLB2kdΔ strain.7,8 In our opinion, these “endocycles” are not autonomous oscillatory modules that must be entrained by the CDK oscillator but rather inadvertent and deleterious oscillations that are normally suppressed by the CDK latching-gate mechanism.",
+    "10.1016/j.jtbi.2004.11.011": "Caspases are thought to be important players in the execution process of apoptosis. Inhibitors of apoptosis (IAPs) are able to block caspases and therefore apoptosis. The fact that a subgroup of the IAP family inhibits active caspases implies that not each caspase activation necessarily leads to apoptosis. In such a scenario, however, processed and enzymically active caspases should somehow be removed. Indeed, IAP–caspase complexes covalently bind ubiquitin, resulting in degradation by the 26S proteasome. Following release from mitochondria, IAP antagonists (e.g. second mitochondrial activator of caspases (Smac)) inactivate IAPs. Moreover, although pro-apoptotic factors such as irradiation or anti-cancer drugs may release Smac from mitochondria in tumor cells, high cytoplasmic survivin and ML-IAP levels might be able to neutralize it and, consequently, IAPs would further be able to bind activated caspases. Here, we propose a simple mathematical model, describing the molecular interactions between Smac deactivators, Smac, IAPs, and caspase-3, including the requirements for both induction and prevention of apoptosis, respectively. In addition, we predict a novel mechanism of caspase-3 degradation that might be particularly relevant in long-living cells.",
+    }
 
 approach_to_name = {
     "ODE": "ordinary differential equation model",
     "DAE": 'differential algebraic equation model',
     "qual": 'logical model',
     "FBC": 'constraint-based model',
-    "delay":'delayed differential equation model',
+    "delay": 'delayed differential equation model',
     "MAMO_0000046": "ordinary differential equation model",
     "MAMO_0000090": "differential algebraic equation model",
     "MAMO_0000030": "logical model",
@@ -126,7 +127,7 @@ approach_to_name = {
     "MAMO_0000020": "pharmacodynamic model",
     "MAMO_0000038": "signalling network",
     "MAMO_0000028": "population model",
-    }
+}
 
 #Pull in the official list of 'template' SED-ML entries.
 nosed_file = r"C:\Users\Lucian\Desktop\temp-biomodels\biosimulations_pipeline\noSED.txt"
@@ -155,7 +156,7 @@ def get_entrez_abstract(db, id):
         return other_abstracts[id]
     print("No abstract for pubmedid", id)
     return ""
-    
+
     # try:
     #     records = list(Bio.Entrez.parse(handle))
     # except RuntimeError:
@@ -189,9 +190,10 @@ def get_new_metadata(biomd_id, old_metadata, master, upload_prev):
             # print(metadata[key])
         else:
             # print("Entry", biomd_id, "missing metadata for", key)
-            assert(key == "modellingApproach")
-            
-    metadata["readme_submission"] = "Curation updates for SED-ML and validity, from the Center for Reproducible Biomedical Modeling, via Lucian Smith."
+            assert (key == "modellingApproach")
+
+    metadata[
+        "readme_submission"] = "Curation updates for SED-ML and validity, from the Center for Reproducible Biomedical Modeling, via Lucian Smith."
     metadata["other_info"] = "SBML Model Format"
     metadata["isMetadataSubmission"] = False
     metadata["isAmend"] = upload_prev
@@ -200,7 +202,7 @@ def get_new_metadata(biomd_id, old_metadata, master, upload_prev):
     # https://www(dev).ebi.ac.uk/biomodels/contributor/list
     metadata["contributorRole"] = "Curator"
     metadata["files"] = {"main": [], "additional": []}
-    
+
     approach = ""
     if "modellingApproach" in metadata:
         approach = metadata["modellingApproach"]["accession"]
@@ -210,7 +212,7 @@ def get_new_metadata(biomd_id, old_metadata, master, upload_prev):
             line = f.read();
             if "MAMO_00" in line:
                 pos = line.find("MAMO_00")
-                approach = line[pos:pos+12]
+                approach = line[pos:pos + 12]
             elif 'fbc:' in line:
                 approach = "FBC"
             elif "qual:" in line:
@@ -221,7 +223,7 @@ def get_new_metadata(biomd_id, old_metadata, master, upload_prev):
                 approach = "delay"
         metadata["modelling_approach"] = approach_to_name[approach]
         if "modellingApproach" in metadata:
-            del metadata['modellingApproach'] #Unnecessary, but cleaner.
+            del metadata['modellingApproach']  #Unnecessary, but cleaner.
 
     # Now update all the files:
     oldfiles = {}
@@ -242,7 +244,6 @@ def get_new_metadata(biomd_id, old_metadata, master, upload_prev):
         else:
             oldfiles_v2[file] = oldfiles[file]
     oldfiles = oldfiles_v2
-            
 
     deletedFiles = oldfiles.copy()
     for filename in newfiles:
@@ -289,7 +290,7 @@ def get_new_metadata(biomd_id, old_metadata, master, upload_prev):
                      "description": "Auto-generated file from CRBM curation."}
             if "sedml" not in filename:
                 print(filename, "not found: generic comment added.")
-        
+
         #Always overwrite the SEDML file descriptions.
         if "sedml" in filename:
             if biomd_id in nosed:
@@ -298,14 +299,18 @@ def get_new_metadata(biomd_id, old_metadata, master, upload_prev):
                 if filename in oldfiles and "auto" not in entry["description"] and "Auto" not in entry["description"]:
                     entry["description"] = entry["description"] + " (additionally CRBM-validated and adjusted)."
                 elif filename in renamed_files:
-                    entry["description"] = oldfiles[renamed_files[filename]] + " (Additionally CRBM-validated and adjusted.)"
-                    entry["description"] = entry["description"].replace(", for example,\r\nby loading it into SED-ML Web Tools (http://sysbioapps.dyndns.org/SED-ML_Web_Tools/)", "")
-                    entry["description"] = entry["description"].replace(", by loading it into SED-ML Web Tools (http://sysbioapps.dyndns.org/SED-ML_Web_Tools/)", "")
+                    entry["description"] = oldfiles[
+                                               renamed_files[filename]] + " (Additionally CRBM-validated and adjusted.)"
+                    entry["description"] = entry["description"].replace(
+                        ", for example,\r\nby loading it into SED-ML Web Tools (http://sysbioapps.dyndns.org/SED-ML_Web_Tools/)",
+                        "")
+                    entry["description"] = entry["description"].replace(
+                        ", by loading it into SED-ML Web Tools (http://sysbioapps.dyndns.org/SED-ML_Web_Tools/)", "")
                     # print(entry["description"])
                 else:
                     entry = {"name": filename,
                              "description": "CRBM-processed SED-ML file, based on original COPASI save file export."}
-                
+
         #Tag the correct file as 'master'.
         if filename == master:
             metadata["files"]["main"].append(entry)
@@ -315,10 +320,10 @@ def get_new_metadata(biomd_id, old_metadata, master, upload_prev):
     for filename in deletedFiles:
         pass
         # print("Deleting file:", biomd, filename)
-    
+
     if len(metadata["files"]["main"]) == 0:
         raise Exception("No 'main' file for entry " + biomd_id)
-    
+
     return metadata
 
 
@@ -344,10 +349,6 @@ def upload_model_files(biomd_id, submission_folder, auth, metadata):
     # print(ret)
 
 
-
-
-
-
 f = open(AUTH_FILE, "r")
 credentials = json.load(f)
 f.close()
@@ -366,15 +367,17 @@ f.close()
 for root, dirs, files in os.walk(final_dir):
     break
 
-no_descriptions = [357, 360, 361, 363, 364, 365, 366, 464, 465, 466, 467, 468, 469, 470, 471, 472, 473, 481, 482, 483, 484, 485, 486, 487, 489, 499, 539, 584, 592, 594, 595, 596, 599, 603, 604, 605, 606, 607, 704, 705, 706, 708, 709, 710, 711, 712, 713, 714, 715, 716, 717, 721, 722, 726, 833, 849, 1048, 1052, 1053, 1055, 1056, 1057, 1058, 1059, ]
+no_descriptions = [357, 360, 361, 363, 364, 365, 366, 464, 465, 466, 467, 468, 469, 470, 471, 472, 473, 481, 482, 483,
+                   484, 485, 486, 487, 489, 499, 539, 584, 592, 594, 595, 596, 599, 603, 604, 605, 606, 607, 704, 705,
+                   706, 708, 709, 710, 711, 712, 713, 714, 715, 716, 717, 721, 722, 726, 833, 849, 1048, 1052, 1053,
+                   1055, 1056, 1057, 1058, 1059, ]
 
 no_abstract = [469, 470, 471, 472, 473, 710, 716, 717, 1052, 1053, 1055, 1056, 1057, 1058, 1059, ]
 
-
-
-for i in range(1, 1081): #1081):
-# for i in [459, 460, 461, 618, 627]:
-    if i in [649, 694, 992, 993, 1049, 1050, 1051, 1066, 1067, 1068, 1069, 1070, 1071, 1073, 1074, 1075, 1076, ]: #Don't exist or aren't SBML
+for i in range(1, 1081):  #1081):
+    # for i in [459, 460, 461, 618, 627]:
+    if i in [649, 694, 992, 993, 1049, 1050, 1051, 1066, 1067, 1068, 1069, 1070, 1071, 1073, 1074, 1075,
+             1076, ]:  #Don't exist or aren't SBML
         continue
     num = f'{i:010d}'
     biomd_id = "BIOMD" + num
@@ -382,7 +385,7 @@ for i in range(1, 1081): #1081):
     oldmd = requests.get(prod_biomodels + "api/model/" + biomd_id, params={"format": "json"})
     oldmetadata = oldmd.json()
     # print(json.dumps(oldmetadata, indent=4, sort_keys=True))
-    
+
     authorization = {
         "Authorization": "Bearer " + credentials["access_token"],
     }
@@ -393,8 +396,7 @@ for i in range(1, 1081): #1081):
     # if uploaded_previously != (i != 601):
     #     assert(False)
 
-
-    new_metadata = get_new_metadata(biomd_id, oldmetadata, masters[biomd_id], uploaded_previously)  
+    new_metadata = get_new_metadata(biomd_id, oldmetadata, masters[biomd_id], uploaded_previously)
 
     # Replace the old files with the new ones:
     folder = biomd_id + "-" + str(uuid.uuid4())
