@@ -2,4 +2,5 @@
 .idea/
 credentials/
 screenshots/
+tmp/
 venv/
