@@ -150,20 +150,20 @@ def update_model(_model_id, metadata):
     ret = requests.post(_url, headers=_headers, params=params,
                         json=metadata, timeout=timeout)
     ret.raise_for_status()
-    print(json.dumps(ret.json()))
+    return ret.json()
 
 
 def do_update_model(m_id):
     """ Do update the given model """
     old_mt = get_old_metadata(m_id)
     new_mt = get_new_metadata(old_mt)
-    print(json.dumps(new_mt))
-    update_model(m_id, new_mt)
+    result = update_model(m_id, new_mt)
+    print(json.dumps(result, indent=2))
 
 
-dirs = []
-for root, dirs, files in os.walk(MODEL_DIR):
-    break
-print(dirs)
+# dirs = []
+# for root, dirs, files in os.walk(MODEL_DIR):
+#     break
+# print(dirs)
 model_id = sys.argv[2]
 do_update_model(model_id)
