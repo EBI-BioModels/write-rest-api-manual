@@ -85,7 +85,7 @@ def create_new_submission():
         "description": "A sample ODE model",
         "readme_submission": "\
     Updated the model via REST API: added an image as the additional file.",
-        "modelling_approach": "Deep Learning",
+        "modelling_approach": "Ordinary differential equation model",
         "isMetadataSubmission": False, "isAmend": True,
         "comment": "Submitted my sample model.",
         "contributorRole": "Curator",
@@ -123,13 +123,13 @@ def get_new_metadata(_old_metadata = None):
     elif ("modelling_approach" in _old_metadata
           and _old_metadata["modelling_approach"] is not None):
         metadata["modelling_approach"] = _old_metadata["modelling_approach"]
-    # metadata["modelling_approach"] = "Deep Learning"
+    metadata["modelling_approach"] = "Ordinary differential equation model"
 
     metadata["isMetadataSubmission"] = False
 
     metadata["isAmend"] = True
 
-    metadata["comment"] = "Added the manuscript and corrected the annotations."
+    metadata["comment"] = "Corrected the modelling approach."
 
     metadata["files"] = {"main": _old_metadata["files"]["main"], "additional": []}
     if "additional" in _old_metadata["files"]:
