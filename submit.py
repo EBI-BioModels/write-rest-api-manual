@@ -207,7 +207,7 @@ def parse_args():
         print("Usage: python update_biomodels.py <env> <MODEL_ID> where "
               "<env>: prod|dev|local")
         m_id = None
-        if len(sys.argv) == 1:
+        if len(sys.argv) == 2:
             _env = sys.argv[1]
         else:
             _env = "local"
