@@ -20,7 +20,7 @@ masters_filename = "all_masters.json"
 dev_biomodels = "https://wwwdev.ebi.ac.uk/biomodels/"
 prod_biomodels = "https://www.ebi.ac.uk/biomodels/"
 
-AUTH_FILE = "credentials.json"
+AUTH_FILE = "credentials/credentials.json"
 # root_biomodels = "http://localhost:8080/biomodels/"
 
 non_sbml2latex_pdfs = ["Text_S1.pdf", "journal.pcbi.1002815-1.pdf", "BMD586-7_annotations.pdf", "MAP_MEMOTE.pdf", ]
