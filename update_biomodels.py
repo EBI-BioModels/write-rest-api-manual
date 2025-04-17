@@ -60,9 +60,9 @@ def update_model_filenames(updated_filenames, _metadata):
     """ Update the name of the model files after uploading """
 
     all_model_files = _metadata["files"]["main"] + _metadata["files"]["additional"]
-    for mfile in all_model_files:
-        if mfile["name"] in updated_filenames:
-            mfile["name"] = updated_filenames[mfile["name"]]
+    for m_file in all_model_files:
+        if m_file["name"] in updated_filenames:
+            m_file["name"] = updated_filenames[m_file["name"]]
 
 def get_old_metadata(_model_id):
     """ Get the old/current metadata of a given model id in JSON format """
@@ -75,9 +75,36 @@ def get_old_metadata(_model_id):
     return _old_metadata
 
 
-def get_new_metadata(_old_metadata):
-    """ Populate the new metadata from the old metadata """
+def create_new_submission():
+    """
+    Create a new simple submission. Below is a simple submission without
+    publication details
+    """
+    metadata = {
+        "name": "TNguyen2025 - My ODE model",
+        "description": "A sample ODE model",
+        "readme_submission": "\
+    Updated the model via REST API: added an image as the additional file.",
+        "modelling_approach": "Deep Learning",
+        "isMetadataSubmission": False, "isAmend": True,
+        "comment": "Submitted my sample model.",
+        "contributorRole": "Curator",
+        "format": {"name": "SBML", "identifier": "SBML", "version": "L3V2"},
+        "files": {
+            "main": [{
+                "name": "toy_sbml_model.xml",
+                "description": "SBML L3V2",
+            }],
+            "additional": []
+        }
+    }
+    return metadata
 
+
+def get_new_metadata(_old_metadata = None):
+    """ Populate the new metadata from the old metadata """
+    if _old_metadata is None:
+        return create_new_submission()
     metadata = {"submissionId": _old_metadata["submissionId"]}
     if "publicationId" in _old_metadata:
         metadata["publicationId"] = _old_metadata["publicationId"]
@@ -145,18 +172,25 @@ def update_model(_model_id, metadata):
                                 timeout=timeout)
         ret.raise_for_status()
         corrected_filenames[filename] = ret.json()["after_uploaded_filename"]
-    update_model_filenames(corrected_filenames, metadata)
+    if _model_id != "new_submission":
+        update_model_filenames(corrected_filenames, metadata)
     _url = BM_URL + "api/submission/update"
+    if "submissionId" not in metadata:
+        _url = BM_URL + "api/submission/create"
     ret = requests.post(_url, headers=_headers, params=params,
                         json=metadata, timeout=timeout)
     ret.raise_for_status()
     return ret.json()
 
 
-def do_update_model(m_id):
+def do_update_model(m_id = None):
     """ Do update the given model """
-    old_mt = get_old_metadata(m_id)
-    new_mt = get_new_metadata(old_mt)
+    if m_id is None:
+        new_mt = get_new_metadata()
+        m_id = "new_submission"
+    else:
+        old_mt = get_old_metadata(m_id)
+        new_mt = get_new_metadata(old_mt)
     result = update_model(m_id, new_mt)
     print(json.dumps(result, indent=2))
 
@@ -165,5 +199,30 @@ def do_update_model(m_id):
 # for root, dirs, files in os.walk(MODEL_DIR):
 #     break
 # print(dirs)
-model_id = sys.argv[2]
-do_update_model(model_id)
+
+
+def parse_args():
+    """ Parse the command line arguments """
+    if len(sys.argv) < 3:
+        print("Usage: python update_biomodels.py <env> <MODEL_ID> where "
+              "<env>: prod|dev|local")
+        m_id = None
+        if len(sys.argv) == 1:
+            _env = sys.argv[1]
+        else:
+            _env = "local"
+    else:
+        _env = sys.argv[1]
+        m_id = sys.argv[2]
+
+    return _env, m_id
+
+
+if __name__ == "__main__":
+    env, model_id = parse_args()
+    if not model_id:
+        print(f"No model id supplied - create a new model in the system {env}")
+        do_update_model()
+    else:
+        print(f"update the new model {model_id} in the system {env}")
+        do_update_model(model_id)
