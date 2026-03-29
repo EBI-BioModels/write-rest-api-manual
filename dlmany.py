@@ -9,7 +9,7 @@ BASE_URL = "https://biomodels.org"
 
 
 def get_all_identifiers():
-    url = f"{BASE_URL}/model/identifiers?format=json"
+    url = f"{BASE_URL}/model/identifiers?isprivate=false&format=json"
 
     response = requests.get(url, timeout=30)
     response.raise_for_status()
